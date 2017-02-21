@@ -1,4 +1,4 @@
-# neurophonetics
+# R for Arts
 
-Contains HTML5 version of my Neurophonetics lecture for University of Glasgow English Language Honours phonetics students.
+Contains HTML5 slides for the SGSAH funded R for Arts course held at the  University of Glasgow.
 March 2017.
