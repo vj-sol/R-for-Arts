@@ -30,7 +30,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
-
+        <!--    NEW TOP LEVEL SLIDE      -->
         <section>
           <h1>
             <img src='resources/R-logo.png' alt='R logo' style='background:none; border:none; box-shadow:none;'> for Arts
@@ -39,8 +39,9 @@
             March 10th 2017
           </h4>
         </section>
-
+        <!--    NEW TOP LEVEL SLIDE      -->
         <section>
+
           <section>
             <h2>
               About this course
@@ -48,50 +49,45 @@
           </section>
 
           <section>
-            <section>
-              <h2>
-                Meet the tutors
-              </h2>
-            </section>
+            <h2>
+              Meet the tutors
+            </h2>
             <table class='stretch' align='left' width='100%' height='100%'>
               <tr>
                 <td>
-                  <h5 class='fragment' align='left'>
+                  <h5 class='fragment' data-fragment-index='1' align='left'>
                     Ewa Wanat
                   </h5>
                 </td>
                 <td>
-                  <img class='fragment 'src='resources/pusheen-box.gif' height='100px' style='float:right; background:none; border:none; box-shadow:none;'>
-                  <p class='fragment' align='left'>
+                  <img class='fragment' data-fragment-index='1' src='resources/pusheen-box.gif' height='100px' style='float:right; background:none; border:none; box-shadow:none;'>
+                  <p class='fragment' data-fragment-index='1' align='left'>
                     See me for any administrative issues.
                   </p>
                 </td>
               </tr>
-
               <tr>
                 <td>
-
-                  <h5 class='fragment' align='left'>
+                  <h5 class='fragment' data-fragment-index='2' align='left'>
                     Robert Lennon
                   </h5>
                 </td>
                 <td>
-                  <img class='fragment' src='resources/pusheen-star-trek.gif' width = '125px' height='125px' style='float:right; background:none; border:none; box-shadow:none;'>
-                  <p class='fragment' align='left'>
+                  <img class='fragment' data-fragment-index='2' src='resources/pusheen-star-trek.gif' width = '125px' height='125px' style='float:right; background:none; border:none; box-shadow:none;'>
+                  <p class='fragment' data-fragment-index='2' align='left'>
                     I'm here to help with R.
                   </p>
                 </td>
               </tr>
-
               <tr>
                 <td>
-                  <h5 class='fragment' align='left'>
+                  <h5 class='fragment' data-fragment-index='3' align='left'>
                     Vijay Solanki
                   </h5>
                 </td>
                 <td>
-                  <img class='fragment' src='resources/pusheen-typing.gif' width = '125px' height='125px' style='float:right; background:none; border:none; box-shadow:none;'>
-                  <p class='fragment'>
+                  <img class='fragment' data-fragment-index='3' src='resources/pusheen-typing.gif' width = '125px' height='125px' style='float:right; background:none; border:none; box-shadow:none;'>
+                  <p class='fragment' data-fragment-index='3'>
                     I'm here to answer any and all of your questions about R.
                   </p>
                 </td>
@@ -104,50 +100,55 @@
               Course structure
             </h2>
             <p align='left'>
-              Three day course, where each course covers a specific set of goals.
+              Three day course, where each day covers a specific set of goals:
             </p>
-
-            <h4 align='left'>
-              Day 1 - Friday 10th March
-            </h4>
-            <p>
-              Introduces R and demonstrates the basic skills required to engage with R.
-            </p>
-          </section>
-          <section>
-            <section>
-              <h2>
-                Course structure
-              </h2>
-              <h4 align='left'>
+            <div align='left' class='fragment'>
+              <h4>
+                Day 1 - Friday 10th March
+              </h4>
+              <p>
+                Introduces R, demonstrates basic skills and outlines proper coding and script management practices.
+              </p>
+            </div>
+            <div align='left' class='fragment'>
+              <h4>
                 Day 2 - Friday 17th March
               </h4>
-              <h4 align='left'>
+            </div>
+            <div align='left' class='fragment'>
+              <h4>
                 Day 3 - Friday 24th March
               </h4>
-            </section>
+            </div>
           </section>
-
-
         </section>
-
+        <!--    NEW TOP LEVEL SLIDE      -->
         <section>
-          <section align='left'>
+          <section>
             <h2 align='center'>
               What is R?
             </h2>
-            <p class='fragment'>
-              According to the official R website:
+          </section>
+          <section align='left'>
+            <p>
+              According to the official
+              <a href='https://www.r-project.org/' target='_blank'>
+                R
+              </a>
+              website:
             <blockquote class='fragment'align='left' style='background:none; border:none; box-shadow:none;'>
-              R is a free software environment for statistical computing and graphics.
+              "R is a free software environment for statistical computing and graphics."
             </blockquote>
             </p>
-          <p class='fragment'>
-            R is a language
-          </p>
-        </section>
         </section>
 
+        <section>
+          <h2 class='fragment'>
+            R is a language
+          </h2>
+        </section>
+        </section>
+      <!--    NEW TOP LEVEL SLIDE      -->
       <section>
         <section>
           <h2>
@@ -156,33 +157,37 @@
           <img src='resources/R-logo.png' alt='R logo' style='background:none; border:none; box-shadow:none;'>
         </section>
         <section>
-          <iframe width='560' height='315' src='https://www.youtube.com/embed/-e9QzIkP5qI' frameborder='0' allowfullscreen>
-          </iframe>
+          <pre><code data-trim data-noescape>
+           x <- 10
+          </code></pre>
+
+<!--           <iframe width='560' height='315' src='https://www.youtube.com/embed/-e9QzIkP5qI' frameborder='0' allowfullscreen> -->
+<!--           </iframe> -->
         </section>
-      </section>
+        </section>
 
+        </div>
     </div>
-    </div>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-  <script>
-    // More info https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-      history: true,
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
 
-      // More info https://github.com/hakimel/reveal.js#dependencies
-      dependencies: [
-        { src: 'lib/js/classList.js', condition: function ()
-         { return !document.body.classList;}},
-        { src: 'plugin/markdown/marked.js' },
-        { src: 'plugin/markdown/markdown.js' },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-      ]
-    });
-  </script>
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function ()
+           { return !document.body.classList;}},
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
   </body>
 </html>
