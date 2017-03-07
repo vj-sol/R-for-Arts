@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/theme/white.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/atelier-heath-dark.css">
 
     <!--Add support for earlier versions of Internet Explorer -->
     <!--[if lt IE 9]>
@@ -56,6 +56,20 @@
             <aside class='notes'>
 
             </aside>
+          </section>
+
+          <section>
+            <blockquote align='left'>
+              Frustration is natural when you start programming in R, because it is such a stickler for punctuation, and even one character out of place will cause it to complain.
+            </blockquote>
+            <p align='right'>
+              <small>
+                Hadley Wickam, Chief Scientist at RStudio
+              </small>
+            </p>
+            <p class='fragment'>
+              So, we'll do our very best to keep things light-hearted.
+            </p>
           </section>
 
           <section>
@@ -127,11 +141,17 @@
               <h4>
                 Day 2 - Friday 17th March
               </h4>
+              <p>
+                Begins to consider `real' data and how to manage, interpret and evaluate it in R.
+              </p>
             </div>
             <div align='left' class='fragment'>
               <h4>
                 Day 3 - Friday 24th March
               </h4>
+              <p>
+                Focuses on communication of findings from analyses perfromed in R.
+              </p>
             </div>
             <aside class='notes'>
 
@@ -190,22 +210,22 @@
 
         <section>
           <div>
-            <h3>
-              Why use R?
-            </h3>
+            <!--             <h3>
+Why use R?
+</h3> -->
             <ul style='font-size:100%'>
-              <li class='fragment'>Because it’s FREE</li>
+              <li>Because it’s FREE</li>
               <li class='fragment'>Because it is fit for purpose</li>
               <ul>
-              <li class='fragment'>It is designed for data analysis</li>
-              <li class='fragment'>It has a LARGE repository of packages</li>
-              <li class='fragment'>It is being actively updated and maintained</li>
-              <li class='fragment'>It makes it easy to communicate your results</li>
+                <li class='fragment'>It is designed for data analysis</li>
+                <li class='fragment'>It has a LARGE repository of packages</li>
+                <li class='fragment'>It is being actively updated and maintained</li>
+                <li class='fragment'>It makes it easy to communicate your results</li>
               </ul>
               <li class='fragment'> Because you are not alone!</li>
               <ul>
                 <li class='fragment'>Most R users are not programmers</li>
-              <li class='fragment'>It has an active community</li>
+                <li class='fragment'>It has an active community</li>
               </ul>
 
 
@@ -257,44 +277,350 @@
 
       <!--    NEW TOP LEVEL SLIDE      -->
       <section>
+
         <section>
           <h2>
             Say hello to
           </h2>
-          <img src='resources/R-logo.png' alt='R logo' style='background:none; border:none; box-shadow:none;'>
+          <img src='resources/R-logo.svg' alt='R logo' style='background:none; border:none; box-shadow:none;' width=40%>
+          <aside class='notes'>
+
+          </aside>
         </section>
+
         <section>
-          <pre><code data-trim data-noescape>
-           x <- 10
-          </code></pre>
+          <div>
+          <pre class='stretch'><code data-trim data-noescape class='R'>
+#R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
+#Copyright (C) 2016 The R Foundation for Statistical Computing
+#Platform: x86_64-pc-linux-gnu (64-bit)
+#
+#R is free software and comes with ABSOLUTELY NO WARRANTY.
+#You are welcome to redistribute it under certain conditions.
+#Type 'license()' or 'licence()' for distribution details.
+#
+#Natural language support but running in an English locale
+#
+#R is a collaborative project with many contributors.
+#Type 'contributors()' for more information and
+#'citation()' on how to cite R or R packages in publications.
+#
+#Type 'demo()' for some demos, 'help()' for on-line help, or
+#'help.start()' for an HTML browser interface to help.
+#Type 'q()' to quit R.
 
-<!--           <iframe width='560' height='315' src='https://www.youtube.com/embed/-e9QzIkP5qI' frameborder='0' allowfullscreen> -->
-<!--           </iframe> -->
-        </section>
+>          </code></pre>
+            <img style='position:absolute; top:500px; right:100px' src='resources/pusheen-fear.gif' alt='Pusheen - fear' class='fragment'/>
+          </div>
+          <aside class='notes'>
+
+          </aside>
         </section>
 
+        <section>
+          <h3>
+            A love-Hate relationship
+          </h3>
+        </section>
+
+      </section>
+
+      <!--    NEW TOP LEVEL SLIDE      -->
+      <section>
+        <section>
+          <h2>Getting help</h2>
+          <aside class='notes'>
+
+          </aside>
+        </section>
+
+      </section>
+
+
+      <!--    NEW TOP LEVEL SLIDE      -->
+      <section>
+
+        <section>
+          <h2>Calculator</h2>
+          <aside class='notes'>
+
+          </aside>
+        </section>
+
+        <section>
+          <div align='left'>
+            <p>
+              In some ways R is just a glorified calculator.
+              It can be used to perform simple arithmetic for:
+            </p>
+            <div class='fragment'>
+              <p>Addition</p>
+              <pre><code data-trim data-noescape class='R'>
+              <p style='margin-bottom:0em; margin-top:0em' class='fragment'>1 + 1</p><p style='margin-bottom:0em; margin-top:0em' class='fragment'>[1] 2</p>
+              </code></pre>
+            </div>
+            <div class='fragment'>
+              <p>Subtraction</p>
+              <pre><code data-trim data-noescape>
+              <p style='margin-bottom:0; margin-top:0' class='fragment'>> 2 - 1</p><p style='margin-bottom:0; margin-top:0' class='fragment'>[1] 1</p>
+              </code></pre>
+            </div>
+            <div class='fragment'>
+              <p>Division</p>
+              <pre><code data-trim data-noescape>
+              <p style='margin-bottom:0; margin-top:0' class='fragment'>> 4 / 2</p><p style='margin-bottom:0; margin-top:0' class='fragment'>[1] 2</p>
+              </code></pre>
+            </div>
+            <div class='fragment'>
+              <p>Multiplication</p>
+              <pre><code data-trim data-noescape>
+              <p style='margin-bottom:0; margin-top:0' class='fragment'>> 2 * 2</p><p style='margin-bottom:0; margin-top:0' class='fragment'>[1] 4</p>
+              </code></pre>
+            </div>
+          </div>
+          <aside class='notes'>
+            <p>
+              And in many respects, this would be a perfectly reasonable view since it can indeed perform calculations.
+            </p>
+          </aside>
+        </section>
+      </section>
+
+
+      <!--    NEW TOP LEVEL SLIDE      -->
+      <section>
+        <section>
+          <h2>
+            Objects
+          </h2>
+          <aside class='notes'>
+
+          </aside>
+        </section>
+      </section>
+
+      <!--    NEW TOP LEVEL SLIDE      -->
+      <section>
+        <section>
+          <h2>
+            Data classes
+          </h2>
+          <aside class='notes'>
+
+          </aside>
+        </section>
+      </section>
+
+      <!--    NEW TOP LEVEL SLIDE      -->
+      <section>
+
+        <section>
+          <h2>
+            Data Structures
+          </h2>
+          <aside class='notes'>
+
+          </aside>
+        </section>
+
+        <section>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th style='border:0'>
+                  </th>
+                  <th style='border:0'>
+                    Homogeneous
+                  </th>
+                  <th style='border:0'>
+                    Heterogeneous
+                  </th>
+              </thead>
+              <tbody>
+              </tr>
+            <tr>
+              <td style='border:0'>
+                <p>
+                  1d
+                </p>
+              </td>
+              <td style='border:0'>
+                <p>
+                  Atomic Vector
+                </p>
+              </td>
+              <td style='border:0'>
+                <p>
+                  List
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style='border:0'>
+                2d
+              </td>
+              <td style='border:0'>
+                Matrix
+              </td>
+              <td style='border:0'>
+                Data Frame
+              </td>
+            </tr>
+            <tr>
+              <td style='border:0'>
+                nd
+              </td>
+              <td style='border:0'>
+                Array
+              </td>
+              <td style='border:0'>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        <p align='right'>
+          <small>
+            Table from
+          </small>
+          <a href='http://adv-r.had.co.nz/Data-structures.html'>
+            <small>
+              &nbsp;Advanced R
+            </small>
+          </a>
+        </p>
         </div>
-    </div>
+      <aside class='notes'>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+      </aside>
+      </section>
+    </section>
 
-    <script>
-      // More info https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        history: true,
+  <section>
+    <section>
+      <h2>Next week</h2>
+    </section>
+    <aside class='notes'>
 
-        // More info https://github.com/hakimel/reveal.js#dependencies
-        dependencies: [
-          { src: 'lib/js/classList.js', condition: function ()
-           { return !document.body.classList;}},
-          { src: 'plugin/markdown/marked.js' },
-          { src: 'plugin/markdown/markdown.js' },
-          { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
-      });
-    </script>
-  </body>
+    </aside>
+  </section>
+  </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    height:800,
+    width:960,
+    margin: 0.1,
+    minScale: 0.2,
+    maxScale:1.5,
+    // Display controls in the bottom right corner
+    controls: true,
+
+    // Display a presentation progress bar
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: false,
+
+    // Push each slide change to the browser history
+    history: true,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    center: true,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Randomizes the order of slides each time the presentation loads
+    shuffle: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Flags if we should show a help overlay when the questionmark
+    // key is pressed
+    help: true,
+
+    // Flags if speaker notes should be visible to all viewers
+    showNotes: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Use this method for navigation when auto-sliding
+    autoSlideMethod: Reveal.navigateNext,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+    // Number of pixels to move the parallax background per slide
+    // - Calculated automatically unless specified
+    // - Set to 0 to disable movement along an axis
+    parallaxBackgroundHorizontal: null,
+    parallaxBackgroundVertical: null,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function ()
+       { return !document.body.classList;}},
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () { return !!document.body.classList; } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+  Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+</script>
+</body>
 </html>
