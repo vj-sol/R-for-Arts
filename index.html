@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/theme/white.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/atelier-heath-dark.css">
+    <!--     <link rel="stylesheet" href="lib/css/atelier-heath-dark.css"> -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
     <!--Add support for earlier versions of Internet Explorer -->
     <!--[if lt IE 9]>
@@ -26,6 +27,7 @@
       link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
+
   </head>
   <body>
     <div class="reveal">
@@ -59,17 +61,33 @@
           </section>
 
           <section>
-            <blockquote align='left'>
-              Frustration is natural when you start programming in R, because it is such a stickler for punctuation, and even one character out of place will cause it to complain.
-            </blockquote>
-            <p align='right'>
-              <small>
-                Hadley Wickam, Chief Scientist at RStudio
-              </small>
-            </p>
-            <p class='fragment'>
-              So, we'll do our very best to keep things light-hearted.
-            </p>
+            <h3>
+              R: A love-Hate relationship
+            </h3>
+            <div align='left' class='fragment'>
+              <blockquote align='left'>
+                Frustration is natural when you start programming in R, because it is such a stickler for punctuation, and even one character out of place will cause it to complain.
+              </blockquote>
+              <p align='right'>
+                <small>
+                  Hadley Wickam, Chief Scientist at RStudio
+                </small>
+              </p>
+              <p class='fragment'>
+                So, we'll do our very best to keep things light-hearted. But...
+              </p>
+              <p class='fragment'>
+                we will also get you to learn R the hard way.
+              </p>
+            </div>
+            <aside class='notes'>
+              <p>
+                This means no shortcuts or fancy GUIs.
+                We'll be working purely in code and avoiding using the mouse as much as possible!
+                This might sound harsh but it will be a benefit in the longrun.
+                It will allow you to work faster, more efficiently and will allow you to grow your coding skilsl more generally.
+              </p>
+            </aside>
           </section>
 
           <section>
@@ -162,6 +180,7 @@
 
         <!--    NEW TOP LEVEL SLIDE      -->
         <section>
+
           <section>
             <h2 align='center'>
               What is R?
@@ -170,127 +189,133 @@
 
             </aside>
           </section>
+
           <section align='left'>
-            <p>
-              According to the official
-              <a href='https://www.r-project.org/' target='_blank'>
-                R
-              </a>
-              website:
-            <blockquote class='fragment'align='left' style='background:none; border:none; box-shadow:none;'>
-              "R is a free software environment for statistical computing and graphics."
-            </blockquote>
-            </p>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-
-        <section>
-          <h2 class='fragment'>
-            R is a language
-          </h2>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-        </section>
-
-      <!--    NEW TOP LEVEL SLIDE      -->
-      <section>
-
-        <section>
-          <h2>
-            Why use R?
-          </h2>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-
-        <section>
-          <div>
-            <!--             <h3>
-Why use R?
-</h3> -->
-            <ul style='font-size:100%'>
-              <li>Because it’s FREE</li>
-              <li class='fragment'>Because it is fit for purpose</li>
-              <ul>
-                <li class='fragment'>It is designed for data analysis</li>
-                <li class='fragment'>It has a LARGE repository of packages</li>
-                <li class='fragment'>It is being actively updated and maintained</li>
-                <li class='fragment'>It makes it easy to communicate your results</li>
-              </ul>
-              <li class='fragment'> Because you are not alone!</li>
-              <ul>
-                <li class='fragment'>Most R users are not programmers</li>
-                <li class='fragment'>It has an active community</li>
-              </ul>
-
-
-
-              <!--               <li>A strong foundation in functional programming. The ideas of functional programming are well suited to solving many of the challenges of data analysis. R provides a powerful and flexible toolkit which allows you to write concise yet descriptive code.</li> -->
-
-              <!--               <li>An IDE tailored to the needs of interactive data analysis and statistical programming.</li> -->
-
-              <!--               <li>Powerful metaprogramming facilities. R is not just a programming language, it is also an environment for interactive data analysis. Its metaprogramming capabilities allow you to write magically succinct and concise functions and provide an excellent environment for designing domain-specific languages.</li> -->
-
-              <!--               <li>Designed to connect to high-performance programming languages like C, Fortran, and C++.</li> -->
-            </ul>
-          </div>
-          <aside class='notes'>
-            <p>
-              open source, and available on every major platform. As a result, if you do your analysis in R, anyone can easily replicate it.
-            </p>
-            <p>
-              A massive set of packages for statistical modelling, machine learning, visualisation, and importing and manipulating data. Whatever model or graphic you’re trying to do, chances are that someone has already tried to do it. At a minimum, you can learn from their efforts.
-            </p>
-            <p>
-              Cutting edge tools. Researchers in statistics and machine learning will often publish an R package to accompany their articles. This means immediate access to the very latest statistical techniques and implementations.
-            </p>
-            <p>
-              This includes features likes missing values, data frames, and subsetting.
-            </p>
-            <p>
-              A fantastic community. It is easy to get help from experts on the R-help mailing list, stackoverflow, or subject-specific mailing lists like R-SIG-mixed-models or ggplot2. You can also connect with other R learners via twitter, linkedin, and through many local user groups.
-            </p>
-            <p>
-              Powerful tools for communicating your results. R packages make it easy to produce html or pdf reports, or create interactive websites.
-            </p>
             <ul>
-              <li>Much of the R code you’ll see in the wild is written in haste to solve a pressing problem. As a result, code is not very elegant, fast, or easy to understand. Most users do not revise their code to address these shortcomings.</li>
+              <li><p>
+                According to the official
+                <a href='https://www.r-project.org/' target='_blank'>
+                  R
+                </a>
+                website:
+                <blockquote class='fragment'align='left' style='background:none; border:none; box-shadow:none;'>
+                  "R is a free software environment for statistical computing and graphics."
+                </blockquote>
+              </p></li>
+          <li class='fragment'>
+            <p class='fragment grow' align='left'>
+              R is a language
+            </p></li>
+          </ul
+          <aside class='notes'>
 
-              <li>Compared to other programming languages, the R community tends to be more focussed on results instead of processes. Knowledge of software engineering best practices is patchy: for instance, not enough R programmers use source code control or automated testing.</li>
-
-              <li>Metaprogramming is a double-edged sword. Too many R functions use tricks to reduce the amount of typing at the cost of making code that is hard to understand and that can fail in unexpected ways.</li>
-
-              <li>Inconsistency is rife across contributed packages, even within base R. You are confronted with over 20 years of evolution every time you use R. Learning R can be tough because there are many special cases to remember.</li>
-
-              <li>R is not a particularly fast programming language, and poorly written R code can be terribly slow. R is also a profligate user of memory.</li>
-
-              <li>Personally, I think these challenges create a great opportunity for experienced programmers to have a profound positive impact on R and the R community. R users do care about writing high quality code, particularly for reproducible research, but they don’t yet have the skills to do so. I hope this book will not only help more R users to become R programmers but also encourage programmers from other languages to contribute to R.</li>
-            </ul>
           </aside>
         </section>
+      <!--
+<section>
+
+<aside class='notes'>
+
+</aside>
+</section> -->
       </section>
 
-      <!--    NEW TOP LEVEL SLIDE      -->
+    <!--    NEW TOP LEVEL SLIDE      -->
+    <section>
+
       <section>
+        <h2>
+          Why use R?
+        </h2>
+        <aside class='notes'>
 
-        <section>
-          <h2>
-            Say hello to
-          </h2>
-          <img src='resources/R-logo.svg' alt='R logo' style='background:none; border:none; box-shadow:none;' width=40%>
-          <aside class='notes'>
+        </aside>
+      </section>
 
-          </aside>
-        </section>
+      <section>
+        <div>
+          <!--             <h3>
+Why use R?
+</h3> -->
+          <ul style='font-size:100%'>
+            <li>Because it’s FREE</li>
+            <li class='fragment'>Because it is fit for purpose</li>
+            <ul>
+              <li class='fragment'>It is designed for data analysis</li>
+              <li class='fragment'>It has a LARGE repository of packages</li>
+              <li class='fragment'>It is being actively updated and maintained</li>
+              <li class='fragment'>It makes sharing analyses easy</li>
+              <li class='fragment'>It makes it easy to communicate your results</li>
+            </ul>
+            <li class='fragment'> Because you are not alone!</li>
+            <ul>
+              <li class='fragment'>Most R users are not programmers</li>
+              <li class='fragment'>It has an active community</li>
+            </ul>
 
-        <section>
-          <div>
-          <pre class='stretch'><code data-trim data-noescape class='R'>
+
+
+            <!--               <li>A strong foundation in functional programming. The ideas of functional programming are well suited to solving many of the challenges of data analysis. R provides a powerful and flexible toolkit which allows you to write concise yet descriptive code.</li> -->
+
+            <!--               <li>An IDE tailored to the needs of interactive data analysis and statistical programming.</li> -->
+
+            <!--               <li>Powerful metaprogramming facilities. R is not just a programming language, it is also an environment for interactive data analysis. Its metaprogramming capabilities allow you to write magically succinct and concise functions and provide an excellent environment for designing domain-specific languages.</li> -->
+
+            <!--               <li>Designed to connect to high-performance programming languages like C, Fortran, and C++.</li> -->
+          </ul>
+        </div>
+        <aside class='notes'>
+          <p>
+            open source, and available on every major platform. As a result, if you do your analysis in R, anyone can easily replicate it.
+          </p>
+          <p>
+            A massive set of packages for statistical modelling, machine learning, visualisation, and importing and manipulating data. Whatever model or graphic you’re trying to do, chances are that someone has already tried to do it. At a minimum, you can learn from their efforts.
+          </p>
+          <p>
+            Cutting edge tools. Researchers in statistics and machine learning will often publish an R package to accompany their articles. This means immediate access to the very latest statistical techniques and implementations.
+          </p>
+          <p>
+            This includes features likes missing values, data frames, and subsetting.
+          </p>
+          <p>
+            A fantastic community. It is easy to get help from experts on the R-help mailing list, stackoverflow, or subject-specific mailing lists like R-SIG-mixed-models or ggplot2. You can also connect with other R learners via twitter, linkedin, and through many local user groups.
+          </p>
+          <p>
+            Powerful tools for communicating your results. R packages make it easy to produce html or pdf reports, or create interactive websites.
+          </p>
+          <ul>
+            <li>Much of the R code you’ll see in the wild is written in haste to solve a pressing problem. As a result, code is not very elegant, fast, or easy to understand. Most users do not revise their code to address these shortcomings.</li>
+
+            <li>Compared to other programming languages, the R community tends to be more focussed on results instead of processes. Knowledge of software engineering best practices is patchy: for instance, not enough R programmers use source code control or automated testing.</li>
+
+            <li>Metaprogramming is a double-edged sword. Too many R functions use tricks to reduce the amount of typing at the cost of making code that is hard to understand and that can fail in unexpected ways.</li>
+
+            <li>Inconsistency is rife across contributed packages, even within base R. You are confronted with over 20 years of evolution every time you use R. Learning R can be tough because there are many special cases to remember.</li>
+
+            <li>R is not a particularly fast programming language, and poorly written R code can be terribly slow. R is also a profligate user of memory.</li>
+
+            <li>Personally, I think these challenges create a great opportunity for experienced programmers to have a profound positive impact on R and the R community. R users do care about writing high quality code, particularly for reproducible research, but they don’t yet have the skills to do so. I hope this book will not only help more R users to become R programmers but also encourage programmers from other languages to contribute to R.</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+
+    <!--    NEW TOP LEVEL SLIDE      -->
+    <section>
+
+      <section>
+        <h2>
+          Say hello to
+        </h2>
+        <img src='resources/R-logo.svg' alt='R logo' style='background:none; border:none; box-shadow:none;' width=40%>
+        <aside class='notes'>
+
+        </aside>
+      </section>
+
+      <section>
+        <div style='height:10%'>
+          <pre style='height:10%'><code data-trim data-noescape class='r' style='font-size:70%;height:10%'>
 #R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
 #Copyright (C) 2016 The R Foundation for Statistical Computing
 #Platform: x86_64-pc-linux-gnu (64-bit)
@@ -310,201 +335,953 @@ Why use R?
 #Type 'q()' to quit R.
 
 >          </code></pre>
-            <img style='position:absolute; top:500px; right:100px' src='resources/pusheen-fear.gif' alt='Pusheen - fear' class='fragment'/>
+        </div>
+        <div>
+          <pre style='font-size:50%'><code class='r' style='font-size:70%'>#!/usr/bin/Rscript
+###
+## R Script for pre-processing of inquiry reports
+## Written by : Vijay Solanki
+## Date: 14/12/16
+###
+
+## Pre-processing warning
+n = 0
+while(n <1 ){
+          cat("WARNING: Before beginning the pre-processing, I need to know a few things.\n \n(1) Do your documents have title pages, contents etc.?\n \nIf they do then I need to know the number of pages to remove prior to pre-processing.\nPlease make a note of the number of pages to remove from both the beginning and end (back cover) of each document.\n \n")
+          selector <- readline("Do you have this information to hand? (y/n)\n")
+
+          if(selector == "n" | selector == "no" | selector == "No" | selector == "NO"){
+                    #cat("Okay, please collect that information and then restart this script. \n")
+                    stop("Okay, please collect that information and then restart this script. \n")
+          }else if(selector == "y" | selector == "yes" | selector == "Yes" | selector == "YES"){
+                    cat("\nSmashing, then we may begin...\n\n")
+                    n = 1
+          }else{
+                    cat("\nPlease respond with either a y (for yes) or a n (for no). \n \n")
+          }
+
+}
+
+## Loading packages etc.
+
+library(tm)
+library(pdftools)
+library(data.table)
+#library(topicmodels)
+
+## Setting up directories
+setwd("/home/vijay/Documents/Strath/analysis-docs/")
+root_dir <- "/home/vijay/Documents/Strath/analysis-docs/"
+report_dirs <- dir()
+report_no <- length(report_dirs)
+report_list <- ""
+for (i in 1:report_no){
+          report_list <- paste(report_list,report_dirs[i]," (",i,")\n",sep="")
+}
+rm(i)
+report_text <- paste("Which report would you like to process?: \n",report_list,sep="")
+
+n = 0
+while(n<1){
+          selector <- readline(report_text)
+          sel_num <- as.numeric(selector)
+
+          if(is.na(sel_num)){
+                    cat("Please use numeric values :p\n")
+          }
+
+          if(!is.na(sel_num)){
+                    cat("Yay, thanks for using the numeric option :)\n \n \n")
+                    selected_report <- paste(root_dir,report_dirs[sel_num],"/",sep="")
+                    setwd(selected_report)
+                    n = 1
+          }
+}
+rm(n)
+
+## Print polite wait message
+cat("Please bear with me, this bit can take some time... \n \n \n")
+
+## Get number of documents in directory
+n.docs <- length(list.files(pattern='*.pdf'))
+
+## Set max.len object at 0 for use in loop
+max.len <- c(0,0)
+
+## Loop over documents checking for file with max length
+for (i in 1:n.docs){
+          pdf.file <- list.files(pattern='*.pdf')[i]
+
+## Extract text from the pdf file and coerce to data.table
+          text <- as.data.table(pdf_text(pdf.file))
+
+## Get length (number of pages) of the pdf
+          pdf.len <- dim(text)[1]
+
+## Adjust the max.len object to hold length of pdf file if larger than previously allocated
+          if (pdf.len > max.len[1]){
+                    max.len[1] <- pdf.len
+                    max.len[2] <- i
+          }
+}
+
+## Create data.table with appropriate dimensions
+## Fill empty cells with a placeholder
+doc.table <- data.table(matrix("placeholdervty267j",nrow = max.len[1], ncol = i))
+
+## List of filenames
+filenames <- list.files(pattern='*.pdf')
+
+## Tell user how many docs in corpus
+cat(paste("You have ",n.docs," document(s) in your corpus.\n\n",sep=""))
+
+## Load in pdf files and allocate to column in doc.table
+for (i in 1:n.docs){
+          pdf.file <- list.files(pattern='*.pdf')[i]
+          o = 0
+          while(o < 1){
+
+## Ask user for the number of title/contents and back cover pages
+## Begin while loop for collection of front page info
+                    n = 0
+                    while(n < 1){
+                              front <- readline(paste("How many front pages are to be omitted from ",pdf.file," ?\n",sep=""))
+                              front <- as.numeric(front)
+                              if(is.na(front)){
+                                        cat("\nPlease enter a numeric value\n")
+                              }else{ n = 1}
+                    }
+
+## Begin while loop for collection of back page info
+                    n=0
+                    while(n < 1){
+                              back <- readline(paste("How many back pages are to be omitted from ",pdf.file," ?\n",sep=""))
+                              back <- as.numeric(back)
+                              if(is.na(back)){
+                                        cat("\nPlease enter a numeric value\n")
+                              }else{ n = 1}
+                    }
+## Double check that we have the right values
+                    n = 0
+                    while(n < 1){
+                              removal <- readline(paste("So, ",pdf.file, " has ",front," front pages and ",back," back pages to be removed.\n Is this correct? (y/n)\n"))
+                              if (removal == "n"){
+                                        cat("\nOkay, let's start again for this document.\n")
+                                        n = 1
+                              }else if (removal == "y"){
+                                        cat("\nThank you, now processing document...\n")
+                                        n = 1
+                                        o = 1
+                              }else{
+                                        cat("\nPlease answer with either a y or a n.\n")
+                              }
+                    }
+          text <- as.data.table(pdf_text(pdf.file))
+          front_remove <- front + 1
+          back_remove <- dim(text)[1]-back
+          text <- text[front_remove:back_remove,]
+
+## Allocate the text object to appropriate place in data.table
+          doc.table[1:dim(text)[1],i] <- text
+
+          }
+}
+
+
+doc.corpus <- Corpus(VectorSource(doc.table))
+
+## inspect a particular document
+#writeLines(as.character(doc.corpus[[1]]))
+
+## Replace all values of Trust with nhstrust
+f <- content_transformer(function(corpus,pattern,replace){
+      gsub(pattern, replace, corpus)
+})
+#f <- content_transformer(function(x, pattern) gsub(pattern, "", x))
+doc.corpus <- tm_map(doc.corpus,f,"Trust","nhstrust")
+
+## Transform to lower case
+doc.corpus <- tm_map(doc.corpus,content_transformer(tolower))
+
+## remove potentiallyy problematic symbols
+toSpace <- content_transformer(function(x, pattern) { return (gsub(pattern, '', x))})
+doc.corpus <- tm_map(doc.corpus, toSpace, '-')
+doc.corpus <- tm_map(doc.corpus, toSpace, ':')
+doc.corpus <- tm_map(doc.corpus, toSpace, '‘')
+doc.corpus <- tm_map(doc.corpus, toSpace, '•')
+doc.corpus <- tm_map(doc.corpus, toSpace, '•    ')
+doc.corpus <- tm_map(doc.corpus, toSpace, ' -')
+doc.corpus <- tm_map(doc.corpus, toSpace, '"')
+doc.corpus <- tm_map(doc.corpus, toSpace, '"')
+doc.corpus <- tm_map(doc.corpus, toSpace, 'placeholdervty267j')
+doc.corpus <- tm_map(doc.corpus, toSpace, 'yy')
+
+## Remove punctuation
+doc.corpus <- tm_map(doc.corpus, removePunctuation)
+
+## Remove digits
+doc.corpus <- tm_map(doc.corpus, removeNumbers)
+
+## Remove stopwords
+doc.corpus <- tm_map(doc.corpus, removeWords, stopwords('english'))
+
+## Define custom stopwords
+myStopwords <- c("yy","b", "c", "d", "e", "f", "g", "h", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" )
+
+## Remove custom stopwords
+doc.corpus <- tm_map(doc.corpus, removeWords, myStopwords)
+
+## Remove whitespace
+doc.corpus <- tm_map(doc.corpus, stripWhitespace)
+
+## Get all remaining words that begin with "www"
+n_docs <- length(doc.corpus)
+www_words = list()
+for(i in 1:n_docs){
+          content <- paste0(doc.corpus[i]$content[[1]]$content,collapse = " ")
+          content <- strsplit(content," ")
+          content <- transpose(content)
+          content_vec <- grep("www",content)
+          www_words <- c(www_words,content[content_vec])
+}
+www_words <- paste0(www_words,collapse = " ")
+www_words <- strsplit(www_words," ")
+www_words <- www_words[[1]]
+
+## Remove www words
+doc.corpus <- tm_map(doc.corpus, removeWords, www_words)
+
+cat('Happy days, the corpus has been constructed :) \nIt is contained in the R object -> doc.corpus \n \n \n')
+
+report_text <- paste("Would you like to view one of the documents? (y/n): \n",sep="")
+
+n = 0
+while(n<1){
+          selector <- readline(report_text)
+          if(selector == "n" | selector == "no" | selector == "No" | selector == "NO"){
+                    cat("Okay, I will not show you a sample of your corpus. \n")
+                    n = 1
+          }else if(selector == "y" | selector == "yes" | selector == "Yes" | selector == "YES"){
+                    writeLines(as.character(doc.corpus[[1]]))
+                    cat("\n \n The first document from your corpus is printed above. \n")
+                    n = 1
+          }else{
+                    cat("Please respond with either a y (for yes) or a n (for no). \n")
+          }
+}
+rm(n)
+
+report_text <- paste("Would you like me to write the corpus to file? (y/n): \n",sep="")
+
+n = 0
+while(n<1){
+          selector <- readline(report_text)
+          if(selector == "n"){
+                    cat("\nOkay, not writing corpus to file.\n")
+                    n = 1
+          }else if(selector == "y"){
+                    out_filename <- paste(report_dirs[sel_num],'-corpus.csv',sep='')
+                    mainDir <- dirname(dirname(getwd()))
+                    subDir <- '/corpora/'
+                    dir.create(file.path(mainDir, subDir))
+                    corpus.out<-data.frame(text=unlist(sapply(doc.corpus, `[`, "content")), stringsAsFactors=F)
+#                    writeLines(as.character(doc.corpus), con=paste(mainDir,subDir,out_filename,sep=''))
+                    write.csv(corpus.out,paste(mainDir,subDir,out_filename,sep=''))
+                    cat(paste("\ncorpus written to ",mainDir,subDir,out_filename,"\n",sep=""))
+                    n=1
+          }else{
+                    cat("Please respond with either a y (for yes) or a n (for no). \n")
+          }
+}
+rm(n)
+
+
+cat("\nNow I just need to do a bit of housekeeping...\nTransforming corpus into a document term matrix (DTM)")
+
+## Create document-term matrix
+dtm <- DocumentTermMatrix(doc.corpus)
+
+## Convert rownames to filenames
+rownames(dtm) <- filenames
+
+## Collapse matrix by summing over columns
+freq <- colSums(as.matrix(dtm))
+
+## Length should be total number of terms
+cat("\nHere are the total number of terms in the DTM\n")
+print(length(freq))
+
+## Create sort order (descending)
+ord <- order(freq,decreasing=TRUE)
+
+## List all terms in decreasing order of freq and write to disk
+n = 0
+while(n < 1){
+          selector <- readline("\nWould you like to see the terms selected for the DTM? (y/n)\n")
+          if(selector == "n"){
+                    cat("\nOkay, I will not show the terms in the DTM.\n")
+                    n = 1
+          }else if(selector == "y"){
+                    View(freq[ord])
+                    n = 1
+          }else{
+                   cat("\nPlease answer using a y (for yes) or a n (for no)\n")
+          }
+}
+
+
+n = 0
+while(n < 1){
+          selector <- readline("\nWould you like to write the DTM to file? (y/n)\n")
+          if(selector == "n"){
+                    cat("\nOkay, not writing DTM to file.\n")
+                    n = 1
+          }else if(selector == "y"){
+                    out_filename <- paste(report_dirs[sel_num],'-DTM.csv',sep='')
+                    mainDir <- dirname(dirname(getwd()))
+                    subDir <- '/DTMs/'
+                    dir.create(file.path(mainDir, subDir))
+                    write.csv(freq[ord],paste(mainDir,subDir,out_filename,sep=''))
+                    cat(paste("\nDTM written to ",mainDir,subDir,out_filename,"\n",sep=""))
+                    n=1
+          }else{
+                    cat("\nPlease answer using a y (for yes) or a n (for no)\n")
+          }
+
+
+}
+</code></pre>
+            <img style='position:absolute; top:300px; right:100px' src='resources/pusheen-fear.gif' alt='Pusheen - fear' class='fragment'/>
           </div>
           <aside class='notes'>
 
           </aside>
-        </section>
+          </section>
 
         <section>
-          <h3>
-            A love-Hate relationship
-          </h3>
-        </section>
-
-      </section>
-
-      <!--    NEW TOP LEVEL SLIDE      -->
-      <section>
-        <section>
-          <h2>Getting help</h2>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-
-      </section>
-
-
-      <!--    NEW TOP LEVEL SLIDE      -->
-      <section>
-
-        <section>
-          <h2>Calculator</h2>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-
-        <section>
+          <div>
+            <h3>Understanding the environment</h3>
+          </div>
           <div align='left'>
-            <p>
-              In some ways R is just a glorified calculator.
-              It can be used to perform simple arithmetic for:
-            </p>
-            <div class='fragment'>
-              <p>Addition</p>
-              <pre><code data-trim data-noescape class='R'>
-              <p style='margin-bottom:0em; margin-top:0em' class='fragment'>1 + 1</p><p style='margin-bottom:0em; margin-top:0em' class='fragment'>[1] 2</p>
-              </code></pre>
-            </div>
-            <div class='fragment'>
-              <p>Subtraction</p>
-              <pre><code data-trim data-noescape>
-              <p style='margin-bottom:0; margin-top:0' class='fragment'>> 2 - 1</p><p style='margin-bottom:0; margin-top:0' class='fragment'>[1] 1</p>
-              </code></pre>
-            </div>
-            <div class='fragment'>
-              <p>Division</p>
-              <pre><code data-trim data-noescape>
-              <p style='margin-bottom:0; margin-top:0' class='fragment'>> 4 / 2</p><p style='margin-bottom:0; margin-top:0' class='fragment'>[1] 2</p>
-              </code></pre>
-            </div>
-            <div class='fragment'>
-              <p>Multiplication</p>
-              <pre><code data-trim data-noescape>
-              <p style='margin-bottom:0; margin-top:0' class='fragment'>> 2 * 2</p><p style='margin-bottom:0; margin-top:0' class='fragment'>[1] 4</p>
-              </code></pre>
-            </div>
+            <ul class='fragment'>
+              <li>2 core elements:</li>
+              <ul class='fragment'>
+                <li>Command Window</li>
+                <li>Script Window</li>
+              </ul>
+              <li class='fragment'>1 additional element:</li>
+              <ul class='fragment'>
+                <li>Plot window</li>
+              </ul>
+            </ul>
+            <p class='fragment'>The aesthetics of these windows differ between operating systems.</p>
           </div>
-          <aside class='notes'>
-            <p>
-              And in many respects, this would be a perfectly reasonable view since it can indeed perform calculations.
-            </p>
-          </aside>
-        </section>
-      </section>
-
-
-      <!--    NEW TOP LEVEL SLIDE      -->
-      <section>
-        <section>
-          <h2>
-            Objects
-          </h2>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-      </section>
-
-      <!--    NEW TOP LEVEL SLIDE      -->
-      <section>
-        <section>
-          <h2>
-            Data classes
-          </h2>
-          <aside class='notes'>
-
-          </aside>
-        </section>
-      </section>
-
-      <!--    NEW TOP LEVEL SLIDE      -->
-      <section>
-
-        <section>
-          <h2>
-            Data Structures
-          </h2>
-          <aside class='notes'>
-
-          </aside>
         </section>
 
         <section>
           <div>
             <table>
-              <thead>
-                <tr>
-                  <th style='border:0'>
-                  </th>
-                  <th style='border:0'>
-                    Homogeneous
-                  </th>
-                  <th style='border:0'>
-                    Heterogeneous
-                  </th>
-              </thead>
-              <tbody>
+              <tr>
+                <td style='vertical-align:top;border:0'>
+                  Windows
+                </td>
+                <td  style='border:0'>
+                  <img src='resources/R-windows.png' width=50%/>
+                </td>
               </tr>
-            <tr>
+              <tr>
+                <td style='vertical-align:top;border:0'>
+                  Mac
+                </td>
+                <td  style='border:0'>
+                  <img src='resources/R-mac.png' width=50%/>
+                </td>
+              </tr>
+              <tr>
+                <td style='vertical-align:top;border:0'>
+                  Linux
+                </td>
+                <td style='border:0'>
+                  <img src='resources/R-linux.png' width=50%/>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3>
+            Preliminaries
+          </h3>
+          <div align='left'>
+            Some brief notes about the code you will see in this course:
+            <ul>
+              <li class='fragment'>It should be possible to copy any code presented in this course directly into R.</li>
+              <li class='fragment'>The # indicates that the code in that line is a comment and will not be interpretted by R. This is true for all R code, not just the code in this course.</li>
+              <li class='fragment'>All output printed to the command window will be commented out ro ensure that code can be run without issue</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>
+            Preliminaries
+          </h3>
+          <h4 align='left'>
+            Working Directories
+          </h4>
+          <div align='left' style='font-size:70%'>
+            <p>
+              You will need to become familiar with the notion of "working directories".
+              This simply indicates the folder (directory) that you are currently working out of.
+              <span class='fragment highlight-red'>This is important because it dictates where your work will be saved!</span>
+            </p>
+            <div class='fragment'>
+              <p>
+                In R you can find your current working directory by typing the following into the command window
+              <pre style='font-size:100%'><code style='font-size:100%'>getwd()</code></pre>
+              </p>
+          </div>
+          <p class='fragment'>
+            There are some differences between how Windows systems and Unix based systems (Mac/Linux) manage their directory structures.
+          </p>
+          <table class='fragment'>
+            <tr style='border:0'>
               <td style='border:0'>
-                <p>
-                  1d
-                </p>
+                Windows
               </td>
               <td style='border:0'>
-                <p>
-                  Atomic Vector
-                </p>
+                C:\Users\vijay\Documents
+              </td>
+            <tr style='border:0'>
+              <td style='border:0'>
+                Unix
               </td>
               <td style='border:0'>
-                <p>
-                  List
-                </p>
+                /home/vijay/
               </td>
             </tr>
-            <tr>
-              <td style='border:0'>
-                2d
-              </td>
-              <td style='border:0'>
-                Matrix
-              </td>
-              <td style='border:0'>
-                Data Frame
-              </td>
-            </tr>
-            <tr>
-              <td style='border:0'>
-                nd
-              </td>
-              <td style='border:0'>
-                Array
-              </td>
-              <td style='border:0'>
-              </td>
-            </tr>
-            </tbody>
           </table>
-        <p align='right'>
-          <small>
-            Table from
-          </small>
-          <a href='http://adv-r.had.co.nz/Data-structures.html'>
-            <small>
-              &nbsp;Advanced R
-            </small>
-          </a>
+          <p class='fragment'>
+            The \ character has a special meaning for R.
+            Windows users can either use \\ when writing directory paths or can use Unix style / characters.
+          </p>
+          </div>
+      </section>
+
+      <section>
+        <h3>
+          Preliminaries
+        </h3>
+        <h4 align='left'>
+          Working Directories
+        </h4>
+        <div align='left'>
+          <div class='fragment'>
+            <p>
+              You can change your current working directory by using the following function
+            <pre><code>setwd()</code></pre>
+            </p>
+        </div>
+        <div class='fragment'>
+          <p>
+            You will need to provide the function with the address of the directory you wish to change to, eg:
+          <pre><code>setwd('/home/vijay/R-for-Arts')</code></pre>
+          </p>
+        <p class='fragment'>
+          Note that the directory address MUST be enclosed in quotation marks
         </p>
         </div>
+    </section>
+
+    <section align='left'>
+      <h3 align='center'>
+        Preliminaries
+      </h3>
+      <h4>
+        Coding practice (<p style='display:inline;color:red'>CP</p>)
+      </h4>
+      <p>
+        Throughout this course, we will encourage some sensible general coding practices.
+      </p>
+      <h4 class='fragment'>
+        <p style='display:inline;color:red'>CP 1</p> Leave yourself space!
+      </h4>
+      <p class='fragment'>
+        Code is hard to read at the best of times.
+        Make life easy for yourself and put spaces between code elements.
+      </p>
+      <div class='fragment'>
+        Bad:
+        <pre><code class='r'>1+2+3+4+5+6+7+8+9+10</code></pre>
+      </div>
+      <div class='fragment'>
+        Good:
+        <pre><code class='r'>1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10</code></pre>
+      </div>
+    </section>
+
+    </section>
+
+
+  <!--    NEW TOP LEVEL SLIDE      -->
+  <section>
+
+    <section>
+      <h2>
+        Objects
+      </h2>
       <aside class='notes'>
 
       </aside>
-      </section>
     </section>
 
-  <section>
     <section>
-      <h2>Next week</h2>
+      <div align='left'>
+        <p>
+          In some ways R is just a glorified calculator.
+          It can be used to perform simple arithmetic for:
+        </p>
+        <div class='fragment'>
+          <p>Addition</p>
+          <pre><code data-trim data-noescape class='R'>
+1 + 1
+#[1] 2
+              </code></pre>
+        </div>
+        <div class='fragment'>
+          <p>Subtraction</p>
+          <pre><code data-trim data-noescape class='R'>
+2 - 1
+#[1] 1
+              </code></pre>
+        </div>
+        <div class='fragment'>
+          <p>Division</p>
+          <pre><code data-trim data-noescape class='R'>
+4 / 2
+#[1] 2
+              </code></pre>
+        </div>
+        <div class='fragment'>
+          <p>Multiplication</p>
+          <pre><code data-trim data-noescape class='R'>
+2 * 2
+#[1] 4
+              </code></pre>
+        </div>
+      </div>
+      <aside class='notes'>
+        <p>
+          And in many respects, this would be a perfectly reasonable view since it can indeed perform calculations.
+        </p>
+      </aside>
     </section>
+
+    <section>
+      <div align='left'>
+        <p>
+          Note that in the above examples, all output values are printed to the screen, eg:
+        </p>
+        <pre><code>1 + 1
+#[1] 2</code></pre>
+        <p>
+          This applies only to commands issued to the command window that are not assigned to an <span style='color:blue'>object</span>.
+        </p>
+      </div>
+    </section>
+
+    <section align='left'>
+      <p>
+      <ul>
+        <li>Assigning a value to an <span style='color:blue'>object</span> stores it in R's memory.</li>
+        <li>This is done using the assignment character <p style='font-family:verdana'><-</p> or <p style='font-family:verdana'>=</p></li>
+        <li>It is recommended that <p style='display:inline;font-family:verdana'><- </p>is used to assign value to objects, this will save confusion in code later on.  </li>
+      </ul>
+
+      </p>
+    <pre><code class='r'>a <- 1 + 1
+a
+# [1] 2</code></pre>
+
+        </section>
+    <section align='left'>
+      <h4><p style='display:inline;color:red'>CP2 </p>Sensible names</h4>
+      <p>
+        Providing your R <span style='display:inline;color:blue;margin-top:0'>objects</span> with sensible names will save you a lot of pain in the future.
+      </p>
+      <p>
+        <span style='color:blue'>Object</span> names require the following:
+      <ul>
+        <li>They MUST begin with a letter</li>
+        <li>They MUST NOT contain spaces</li>
+        <li>They ARE case sensitive</li>
+        <li>They can ONLY contain letters, numbers, _ and . </li>
+      </ul>
+      </p>
+    <p>
+      Be consistent in your naming convention, some example conventions are:
+    <ul>
+      <li>this_is_snake_case</li>
+      <li>ThisIsCamelCase</li>
+      <li>this.uses.full.stops</li>
+    </ul>
+    </p>
+  </section>
+
+<section>
+  <p>
+    <span style='color:blue'>Objects</span> can contain most output that you generate from your calls to R.
+  </p>
+  <p>
+  <pre><code></code></pre>
+  </p>
+</section>
+
+</section>
+
+<!--    NEW TOP LEVEL SLIDE      -->
+<section>
+  <section>
+    <h2>
+      Data classes
+    </h2>
     <aside class='notes'>
 
     </aside>
   </section>
+
+  <section align='left'>
+    <p>
+      R has
+    </p>
+    <ul>
+      <li>Numeric</li>
+      <li>Integer</li>
+      <li>Atomic</li>
+      <li>Character</li>
+      <li>Logical</li>
+<!--       <li>Atomic Vectors</li>
+      <li>Lists</li> -->
+<!--       <li>Factors</li>
+      <li>Matrices and Arrays</li>
+      <li>Data Frames</li> -->
+    </ul>
+  </section>
+
+</section>
+
+<!--    NEW TOP LEVEL SLIDE      -->
+<section>
+
+  <section>
+    <h2>
+      Data Structures
+    </h2>
+    <aside class='notes'>
+
+    </aside>
+  </section>
+
+  <section align='left'>
+    <h3>
+      Do you speak vector?
+    </h3>
+    <div>
+    <p class='fragment'>
+      R is a vector based language.
+      Meaning that it performs operations on colections of values at the same time, rather than individually.
+<!--       It is this feature of R that makes it so useful for data analysis. -->
+    </p>
+    </div>
+    <p class='fragment'>
+      A vector can be thought of simply as a collection of values.
+    </p>
+    <div class='fragment'>
+    <p align='center'>
+      [ 1 2 3 4 5 6 7 8 9 10]
+    </p>
+    or
+    <p align='center'>
+      [ 'a' 'b' 'c' 'd' 'e' 'f' 'g']
+    </p>
+    </div>
+  </section>
+
+  <section align='left'>
+    <h3>
+      Do you speak vector?
+    </h3>
+    <p>
+      By using vectors, R makes data analysis easier.
+    </p>
+    <table>
+      <tr>
+        <td style='border:0' class='fragment' data-fragment-index='1'>
+          1
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+          2
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+          2
+        </td>
+      </tr>
+      <tr>
+        <td style='border:0' class='fragment' data-fragment-index='1'>
+          2
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+          2
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+          4
+        </td>
+      </tr>
+      <tr>
+        <td style='border:0' class='fragment' data-fragment-index='1'>
+          3
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+          X
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+          2
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+          =
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+          6
+        </td>
+      </tr>
+      <tr>
+        <td style='border:0' class='fragment' data-fragment-index='1'>
+          4
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='2'>
+          2
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+
+        </td>
+        <td style='border:0' class='fragment' data-fragment-index='3'>
+          8
+        </td>
+      </tr>
+      <tr>
+        <td class='fragment' data-fragment-index='1'>
+          5
+        </td>
+        <td class='fragment' data-fragment-index='2'>
+
+        </td>
+        <td class='fragment' data-fragment-index='2'>
+          2
+        </td>
+        <td class='fragment' data-fragment-index='3'>
+
+        </td>
+        <td class='fragment' data-fragment-index='3'>
+          10
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th style='border:0'>
+            </th>
+            <th style='border:0'>
+              Homogeneous
+            </th>
+            <th style='border:0'>
+              Heterogeneous
+            </th>
+        </thead>
+        <tbody>
+        </tr>
+      <tr>
+        <td style='border:0'>
+          <p>
+            1d
+          </p>
+        </td>
+        <td style='border:0'>
+          <p>
+            Atomic Vector
+          </p>
+        </td>
+        <td style='border:0'>
+          <p>
+            List
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style='border:0'>
+          2d
+        </td>
+        <td style='border:0'>
+          Matrix
+        </td>
+        <td style='border:0'>
+          Data Frame
+        </td>
+      </tr>
+      <tr>
+        <td style='border:0'>
+          nd
+        </td>
+        <td style='border:0'>
+          Array
+        </td>
+        <td style='border:0'>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  <p align='right'>
+    <small>
+      Table from
+    </small>
+    <a href='http://adv-r.had.co.nz/Data-structures.html'>
+      <small>
+        &nbsp;Advanced R
+      </small>
+    </a>
+  </p>
   </div>
+<aside class='notes'>
+
+</aside>
+</section>
+</section>
+
+<!--    NEW TOP LEVEL SLIDE      -->
+<!-- <section>
+  <section>
+    <h2>
+      Functions
+    </h2>
+    <aside class='notes'>
+
+    </aside>
+  </section>
+</section> -->
+
+<!--    NEW TOP LEVEL SLIDE      -->
+<section>
+  <section>
+    <h2>Getting help</h2>
+    <aside class='notes'>
+
+    </aside>
+  </section>
+
+  <section align='left'>
+    <h3>
+      Ask R
+    </h3>
+    <div>
+      <p>
+        R has a number of in-built functions for getting help.
+        These examples use the mean function as a test case.
+      </p>
+    </div>
+    <div>
+      <p>
+        If you know the function name use
+      </p>
+      <pre><code class='r'>help(mean)</code></pre>
+    </div>
+    or
+    <div>
+      <pre><code class='r'>?mean</code></pre>
+    </div>
+    <div>
+      If you just want to perform a general search use
+      <pre><code class='r'>help.search('mean')</code></pre>
+    </div>
+    or
+    <div>
+      <pre><code class='r'>??mean</code></pre>
+    </div>
+    <aside class='notes'>
+
+    </aside>
+  </section>
+
+  <section align='left'>
+    <h3>Listen to R</h3>
+    <p>
+      If R gets upset with you and throws an error, the very first thing to do is look at the error message.
+    </p>
+    <p>
+      Although R is very picky about how you give it instructions, it is also very vocal about why it is upset with you.
+      Reading the error message often points to the solution to the problem.
+    </p>
+  </section>
+
+  <section align='left'>
+    <h3>
+      If all else fails, ask Google
+    </h3>
+    <p>
+      The beauty of R being open source is that someone else is likely to have already encountered your error (or at least something similar).
+    </p>
+    <p>
+      Some useful websites include:
+    <ul>
+      <li><a href='https://stackoverflow.com/questions/tagged/r'>stackoverflow</a></li>
+      <li><a href='https://www.statmethods.net'>Quick-R</a></li>
+      <li><a href='https://www.r-bloggers.com'>R-bloggers</a></li>
+    </ul>
+    </p>
+</section>
+
+</section>
+
+<section>
+  <section>
+    <h2>Exercises</h2>
+  </section>
+  <section>
+    <ol>
+      <li>
+      </li>
+    </ol>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Next week</h2>
+  </section>
+  <aside class='notes'>
+
+  </aside>
+</section>
+</div>
 </div>
 
 <script src="lib/js/head.min.js"></script>
