@@ -160,7 +160,7 @@
                 Day 2 - Friday 17th March
               </h4>
               <p>
-                Begins to consider `real' data and how to manage, interpret and evaluate it in R.
+                Begins to consider "real" data and how to manage, interpret and evaluate it in R.
               </p>
             </div>
             <div align='left' class='fragment'>
@@ -1555,7 +1555,7 @@ a
           Some useful websites include:
         <ul>
           <li><a href='https://stackoverflow.com/questions/tagged/r'>stackoverflow</a></li>
-          <li><a href='https://www.statmethods.net'>Quick-R</a></li>
+          <li><a href='http://www.statmethods.net'>Quick-R</a></li>
           <li><a href='https://www.r-bloggers.com'>R-bloggers</a></li>
         </ul>
         </p>
@@ -1672,6 +1672,71 @@ a
       <h3>
         Getting help
       </h3>
+      <ol>
+        <li>Find the help page for the <pre style='display:inline'><code style='display:inline' class='r'>c()</code></pre> function using <pre style='display:inline'><code style='display:inline' class='r'>?</code></pre></li>
+        <li>Find the help page for the <pre style='display:inline'><code style='display:inline'  class='r'>str()</code></pre> function using the <pre style='display:inline'><code style='display:inline' class='r'>help()</code></pre> function</li>
+        <li>Find a function that will <pre style='display:inline'><code style='display:inline' class='r'>transpose</code></pre> a matrix. Use <pre style='display:inline'><code style='display:inline' class='r'>??</code></pre> to do this
+          <ol>
+            <li type='a'>How do you use the function that you found?</li>
+          </ol>
+        </li>
+        <li>Find a function that will calculate the <pre style='display:inline'><code style='display:inline' class='r'>standard deviation</code></pre> of a vector. Use the <pre style='display:inline'><code style='display:inline' class='r'>help.search()</code></pre> function to do this
+          <ol>
+            <li type='a'>How do you use the function that you found?</li>
+          </ol>
+        </li>
+
+      </ol>
+    </section>
+
+    <section align='left'>
+      <h3>
+        Project 1: Coding a simple calculator
+      </h3>
+      <div style='font-size:75%'>
+      <p>
+        To complete this project you will need to look up the usage of the following functions:
+      <pre><code class='r'>as.integer()</code></pre>
+      <pre><code class='r'>readline()</code></pre>
+      <pre><code class='r'>prompt()</code></pre>
+      <pre><code class='r'>switch()</code></pre>
+      <pre><code class='r'>print()</code></pre>
+      <pre><code class='r'>paste()</code></pre>
+      First find the help pages for these functions and learn how they work.
+      </p>
+    <p>
+      You will also need to refer to the section in this presentation about functions.
+    </p>
+    <p>
+      See the next slide for further details...
+    </p>
+      </div>
+        </section>
+
+        <section align='left'>
+          <h3>
+        Project 1: Coding a simple calculator
+      </h3>
+          <p>
+            The code below is missing some vital elements, make adjustments so that the my_calc function takes two numbers from the user and returns the result of the requested calculation.
+          </p>
+          <pre><code class='r'>my_calc <- function(,){
+select = as.integer(readline(prompt="Choose operator number[1(+)  2(-)  3(*)  4(/)]: "))
+operator <- switch(,"","","","")
+result <- switch( ,  ,   ,   ,   )
+print(paste(, operator, , "=", ))
+}</code></pre>
+          <aside class='notes'>
+          <pre><code class='r'>my_calc <- function(x,y){
+select = as.integer ( readline ( prompt = "Choose operator number[1 (+)  2 (-)  3 (*)  4 (/)]: "))
+operator <- switch( select , "+" , "-" , "*" , "/" )
+result <- switch( select , x + y , x - y , x * y , x / y )
+print(paste( x , operator , y , "=" , result ))
+}</code></pre>
+            </aside>
+
+        </section>
+
     </section>
 
   </section>
