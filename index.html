@@ -1000,7 +1000,7 @@ c
 <!--   <section align='left'> -->
 <div class='fragment'>
     <p>
-      These examples show the three R <span style='color:blue'>data classes</span> that are of interest to us.
+      These examples show the three of the four R <span style='color:blue'>data classes</span> that are of interest to us.
     </p>
 <!--     <ul>
       <li>a - Numeric</li>
@@ -1036,7 +1036,7 @@ To determine the <span style='color:blue'>class</span> of an object, we call the
     <ul>
       <div class='fragment'>
         <li>Numeric</li>
-        <pre style='width:500px'><code class='r'>a <- 1
+        <pre><code class='r'>a <- 1
 class(a)
 #[1] "numeric"</code></pre>
 <!--       <li>Integer</li> -->
@@ -1044,19 +1044,19 @@ class(a)
 </div>
         <div class='fragment'>
           <li>Character</li>
-          <pre style='width:500px'><code class='r'>b <- 'R for Arts'
+          <pre><code class='r'>b <- 'R for Arts'
 class(b)
 #[1] "character"</code></pre>
 </div>
           <div class='fragment'>
             <li>Logical</li>
-            <pre style='width:500px'><code class='r'>c <- TRUE
+            <pre><code class='r'>c <- TRUE
 class(c)
 #[1] "logical"</code></pre>
 </div>
           <div class='fragment'>
             <li>Factor</li>
-            <pre style='width:500px'><code class='r'>d <- factor(c("heads", "tails", "tails", "heads", "tails"))
+            <pre><code class='r'>d <- factor(c("heads", "tails", "tails", "heads", "tails"))
 class(d)
 #[1] "factor"
 </code></pre>
@@ -1066,6 +1066,31 @@ class(d)
               (we'll get to functions shortly).
             </div>
             </ul>
+          </section>
+
+          <section align='left'>
+            <h3>
+              Combining data
+            </h3>
+              Where Numeric, Character and Logical data classes can be combined with other data of the same class using the <pre style='display:inline'><code style='display:inline' class='r'>c()</code></pre> function, eg:
+          <pre><code class='r'>a <- c( 1 , 2 , 3 , 4 , 5 )
+a
+#[1] 1 2 3 4 5
+
+b <- c( 'a' , 'b' , 'c' , 'd' , 'e')
+b
+#[1] "a" "b" "c" "d" "e"
+
+c <- c( T , F , T , T , F )
+c
+#[1] TRUE FALSE TRUE TRUE FALSE
+</code></pre>
+<p>
+Factors cannot. This is because they are made up of smaller elements such as numerics, characters or logicals.
+</p>
+<p>
+Factors are a special type of data class.
+</p>
           </section>
 
          <section align='left'>
@@ -1119,8 +1144,51 @@ class(d)
             </p>
 
           </section>
-        <section>#[1] heads tails tails heads tails
-#Levels: heads tails</section>
+
+        <section align='left'>
+          <h3>
+                Factors
+              </h3>
+          <p>
+            This is an example of an unordered factor:
+          </p>
+          <pre><code class='r'>d <- factor(c("heads", "tails", "tails", "heads", "tails"))
+d
+#[1] heads tails tails heads tails
+#Levels: heads tails
+</code></pre>
+<p>
+            This is an example of an ordered factor:
+          </p>
+          <pre><code class='r'>d <- factor(c("low", "middle", "high", "high", "low"),levels=c('low','middle','high'),ordered=TRUE)
+d
+#[1] low middle high high low
+#Levels: low < middle < high
+</code></pre>
+<p>
+Notice how the levels for the ordered factor have symbols indicating which element is higher.
+</p>
+          </section>
+
+<section align='left'>
+<h3>
+                Factors
+              </h3>
+<p>
+Factors help in identifying the possible values that a variable might take even if they don't all appear in your data.
+<pre><code class='r'>coin_toss_character <- c( 'heads' , 'heads' , 'heads' )
+table(coin_toss_character)
+#heads
+#3
+
+coin_toss_factor <- factor(coin_toss_character , levels = c( 'heads' , 'tails' ))
+table(coin_toss_factor)
+#heads   tails
+#    3       0
+</code></pre>
+</p>
+
+</section>
 
         </section>
 
