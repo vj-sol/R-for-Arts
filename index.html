@@ -175,6 +175,23 @@
 
             </aside>
           </section>
+
+          <section>
+            <h2>
+              Course Structure
+            </h2>
+            <div align='left'>
+              <p>
+                Each day will roughly follow the same format:
+              </p>
+              <ul>
+                <li class='fragment'>Begin at 2pm, finish at 6pm</li>
+                <li class='fragment'>Start with a 1hr presentation</li>
+                <li class='fragment'>Followed by 3hrs of guided practice</li>
+              </ul>
+            </div>
+          </section>
+
         </section>
 
 
@@ -717,8 +734,11 @@ while(n < 1){
             Some brief notes about the code you will see in this course:
             <ul>
               <li class='fragment'>It should be possible to copy any code presented in this course directly into R.</li>
-              <li class='fragment'>The # indicates that the code in that line is a comment and will not be interpretted by R. This is true for all R code, not just the code in this course.</li>
-              <li class='fragment'>All output printed to the command window will be commented out ro ensure that code can be run without issue</li>
+              <li class='fragment'>The <p style='display:inline;color:red'>#</p> indicates that the code in that line is a comment and will not be interpretted by R. This is true for all R code, not just the code in this course.</li>
+              <li class='fragment'>All output printed to the command window will be commented out to ensure that code can be run without issue, eg:
+                <pre><code>1 + 1
+#[1] 2</code></pre>
+              </li>
             </ul>
           </div>
         </section>
@@ -829,7 +849,7 @@ while(n < 1){
 
     <section>
       <h2>
-        Objects
+        Basic Operations
       </h2>
       <aside class='notes'>
 
@@ -878,70 +898,128 @@ while(n < 1){
       </aside>
     </section>
 
-    <section>
-      <div align='left'>
+    <section align='left'>
+      <p>However, R is so much more than a simple calculator.
+      </p>
+      <div class='fragment'>
         <p>
-          Note that in the above examples, all output values are printed to the screen, eg:
-        </p>
-        <pre><code>1 + 1
-#[1] 2</code></pre>
-        <p>
-          This applies only to commands issued to the command window that are not assigned to an <span style='color:blue'>object</span>.
+          For instance, R is able to handle text:
+        <pre><code>'Hello World!'
+#[1] "Hello World!"</code></pre>
         </p>
       </div>
-    </section>
-
-    <section align='left'>
+    <div class='fragment'>
       <p>
-      <ul>
-        <li>Assigning a value to an <span style='color:blue'>object</span> stores it in R's memory.</li>
-        <li>This is done using the assignment character <p style='font-family:verdana'><-</p> or <p style='font-family:verdana'>=</p></li>
-        <li>It is recommended that <p style='display:inline;font-family:verdana'><- </p>is used to assign value to objects, this will save confusion in code later on.  </li>
-      </ul>
-
+        It can also evaluate logical statements:
+      <pre><code>2 > 1
+#[1] TRUE
+2 + 1 == 5
+#[1] FALSE</code></pre>
       </p>
-    <pre><code class='r'>a <- 1 + 1
+    </div>
+  </section>
+
+<section>
+  <div align='left'>
+    <p>
+      Note that in the above examples, all output values are printed to the screen, eg:
+    </p>
+    <pre><code>1 + 1
+#[1] 2</code></pre>
+    <p>
+      This applies only to commands issued to the command window that are not assigned to an <span style='color:blue'>object</span>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>
+    Objects
+  </h2>
+  <aside class='notes'>
+
+  </aside>
+</section>
+
+<section align='left'>
+  <p>
+  <ul>
+    <li>Assigning a value to an <span style='color:blue'>object</span> stores it in R's memory.</li>
+    <li>This is done using the assignment character <p style='font-family:verdana'><-</p> or <p style='font-family:verdana'>=</p></li>
+    <li>It is recommended that <p style='display:inline;font-family:verdana'><- </p>is used to assign value to objects, this will save confusion in code later on.  </li>
+  </ul>
+
+  </p>
+<pre><code class='r'>a <- 1 + 1
 a
 # [1] 2</code></pre>
 
         </section>
-    <section align='left'>
-      <h4><p style='display:inline;color:red'>CP2 </p>Sensible names</h4>
-      <p>
-        Providing your R <span style='display:inline;color:blue;margin-top:0'>objects</span> with sensible names will save you a lot of pain in the future.
-      </p>
-      <p>
-        <span style='color:blue'>Object</span> names require the following:
-      <ul>
-        <li>They MUST begin with a letter</li>
-        <li>They MUST NOT contain spaces</li>
-        <li>They ARE case sensitive</li>
-        <li>They can ONLY contain letters, numbers, _ and . </li>
-      </ul>
-      </p>
-    <p>
-      Be consistent in your naming convention, some example conventions are:
-    <ul>
-      <li>this_is_snake_case</li>
-      <li>ThisIsCamelCase</li>
-      <li>this.uses.full.stops</li>
-    </ul>
-    </p>
-  </section>
+<section align='left'>
+  <h4><p style='display:inline;color:red'>CP2 </p>Sensible names</h4>
+  <p>
+    Providing your R <span style='display:inline;color:blue;margin-top:0'>objects</span> with sensible names will save you a lot of pain in the future.
+  </p>
+  <p>
+    <span style='color:blue'>Object</span> names require the following:
+  <ul>
+    <li class='fragment'>They MUST begin with a letter</li>
+    <li class='fragment'>They MUST NOT contain spaces</li>
+    <li class='fragment'>They ARE case sensitive</li>
+    <li class='fragment'>They can ONLY contain letters, numbers, _ and . </li>
+  </ul>
+  </p>
+<p class='fragment'>
+  Be consistent in your naming convention, some example conventions are:
+<ul>
+  <li class='fragment'>this_is_snake_case</li>
+  <li class='fragment'>ThisIsCamelCase</li>
+  <li class='fragment'>this.uses.full.stops</li>
+</ul>
+</p>
+</section>
 
-<section>
+<section align='left'>
   <p>
     <span style='color:blue'>Objects</span> can contain most output that you generate from your calls to R.
   </p>
-  <p>
-  <pre><code></code></pre>
-  </p>
-</section>
+  <pre><code class='r'>a <- 1 + 1
+b <- 'R for Arts'
+c <- 2 > 1</code></pre>
+<div class='fragment'>
+To see what is in an object, simply type its name
+<pre><code class='r'>a
+#[1] 2
+b
+#[1] "R for Arts"
+c
+#[1] TRUE</code></pre>
+</div>
+<!-- </section> -->
 
-</section>
+<!--   <section align='left'> -->
+<div class='fragment'>
+    <p>
+      These examples show the three R <span style='color:blue'>data classes</span> that are of interest to us.
+    </p>
+<!--     <ul>
+      <li>a - Numeric</li>
+      <li>b - Character</li>
+      <li>c - Logical</li>
+    </ul> -->
+</div>
+  </section >
 
-<!--    NEW TOP LEVEL SLIDE      -->
-<section>
+  <!--   <section align='left'>
+To determine the <span style='color:blue'>class</span> of an object, we call the class function:
+<pre><code class='r'>class(a)
+#[1] "numeric"</code></pre>
+</section> -->
+
+  <!-- </section> -->
+
+  <!--    NEW TOP LEVEL SLIDE      -->
+  <!-- <section> -->
   <section>
     <h2>
       Data classes
@@ -953,241 +1031,382 @@ a
 
   <section align='left'>
     <p>
-      R has
+      R has a number of different <span style='color:blue'>data classes</span>, those of interest to us are:
     </p>
     <ul>
-      <li>Numeric</li>
-      <li>Integer</li>
-      <li>Atomic</li>
-      <li>Character</li>
-      <li>Logical</li>
-<!--       <li>Atomic Vectors</li>
-      <li>Lists</li> -->
-<!--       <li>Factors</li>
-      <li>Matrices and Arrays</li>
-      <li>Data Frames</li> -->
-    </ul>
+      <div class='fragment'>
+        <li>Numeric</li>
+        <pre style='width:500px'><code class='r'>a <- 1
+class(a)
+#[1] "numeric"</code></pre>
+<!--       <li>Integer</li> -->
+<!--       <li>Atomic</li> -->
+</div>
+        <div class='fragment'>
+          <li>Character</li>
+          <pre style='width:500px'><code class='r'>b <- 'R for Arts'
+class(b)
+#[1] "character"</code></pre>
+</div>
+          <div class='fragment'>
+            <li>Logical</li>
+            <pre style='width:500px'><code class='r'>c <- TRUE
+class(c)
+#[1] "logical"</code></pre>
+</div>
+            <p class='fragment'>
+              The <span style='font-family:verdana'>class</span> function can be used to determine the class of an object
+              (we'll get to functions shortly).
+            </p>
+            <!--       <li>Atomic Vectors</li>
+<li>Lists</li> -->
+            <!--       <li>Factors</li>
+<li>Matrices and Arrays</li>
+<li>Data Frames</li> -->
+            </ul>
+          </section>
+
+        </section>
+
+      <!--    NEW TOP LEVEL SLIDE      -->
+      <section>
+
+        <section>
+          <h2>
+            Data Structures
+          </h2>
+          <aside class='notes'>
+
+          </aside>
+        </section>
+
+        <section align='left'>
+          <h3>
+            Do you speak vector?
+          </h3>
+          <div>
+            <p class='fragment'>
+              R is a vector based language.
+              Meaning that it performs operations on colections of values at the same time, rather than individually.
+              <!--       It is this feature of R that makes it so useful for data analysis. -->
+            </p>
+          </div>
+          <p class='fragment'>
+            A vector can be thought of simply as a collection of values.
+          </p>
+          <div class='fragment'>
+            <p align='center'>
+              [ 1 2 3 4 5 6 7 8 9 10]
+            </p>
+            or
+            <p align='center'>
+              [ 'a' 'b' 'c' 'd' 'e' 'f' 'g']
+            </p>
+          </div>
+        </section>
+
+        <section align='left'>
+          <h3>
+            Do you speak vector?
+          </h3>
+          <p>
+            By using vectors, R makes data analysis easier.
+          </p>
+          <table>
+            <tr>
+              <td style='border:0' class='fragment' data-fragment-index='1'>
+                1
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+                2
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+                2
+              </td>
+            </tr>
+            <tr>
+              <td style='border:0' class='fragment' data-fragment-index='1'>
+                2
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+                2
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+                4
+              </td>
+            </tr>
+            <tr>
+              <td style='border:0' class='fragment' data-fragment-index='1'>
+                3
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+                X
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+                2
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+                =
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+                6
+              </td>
+            </tr>
+            <tr>
+              <td style='border:0' class='fragment' data-fragment-index='1'>
+                4
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='2'>
+                2
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+
+              </td>
+              <td style='border:0' class='fragment' data-fragment-index='3'>
+                8
+              </td>
+            </tr>
+            <tr>
+              <td class='fragment' data-fragment-index='1'>
+                5
+              </td>
+              <td class='fragment' data-fragment-index='2'>
+
+              </td>
+              <td class='fragment' data-fragment-index='2'>
+                2
+              </td>
+              <td class='fragment' data-fragment-index='3'>
+
+              </td>
+              <td class='fragment' data-fragment-index='3'>
+                10
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th style='border:0'>
+                  </th>
+                  <th style='border:0'>
+                    Homogeneous
+                  </th>
+                  <th style='border:0'>
+                    Heterogeneous
+                  </th>
+              </thead>
+              <tbody>
+              </tr>
+            <tr class='fragment'>
+              <td style='border:0'>
+                <p>
+                  1d
+                </p>
+              </td>
+              <td style='border:0'>
+                <p>
+                  Atomic Vector
+                </p>
+              </td>
+              <td style='border:0'>
+                <p>
+                  List
+                </p>
+              </td>
+            </tr>
+            <tr class='fragment'>
+              <td style='border:0'>
+                2d
+              </td>
+              <td style='border:0'>
+                Matrix
+              </td>
+              <td style='border:0'>
+                Data Frame
+              </td>
+            </tr>
+            <tr class='fragment'>
+              <td style='border:0'>
+                nd
+              </td>
+              <td style='border:0'>
+                Array
+              </td>
+              <td style='border:0'>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        <p align='right'>
+          <small>
+            Table from
+          </small>
+          <a href='http://adv-r.had.co.nz/Data-structures.html'>
+            <small>
+              &nbsp;Advanced R
+            </small>
+          </a>
+        </p>
+        </div>
+      <aside class='notes'>
+
+      </aside>
+      </section>
+
+    <section align='left'>
+      <h4>
+        Atomic Vectors
+      </h4>
+      <p>
+        Vectors only have 1-dimension and can contain any data class as long as they are all the same.
+      </p>
+      <pre><code class='r'>numeric_vector <- c( 1 , 2 , 3 , 4 , 5 )
+#[1] 1 2 3 4 5
+
+character_vector <- c( 'a' , 'b' , 'c' , 'd' , 'e' )
+#[1] "a" "b" "c" "d" "e"
+
+logical_vector <- c( T , F , F , T , T )
+#[1] TRUE FALSE FALSE TRUE TRUE
+</code></pre>
+<!--     </section>
+
+    <section align='left'> -->
+      <h4>
+        Lists
+      </h4>
+      <p>
+        Lists only have 1-dimension and can contain any data class.
+      </p>
+      <pre><code class='r'>mixed_list <- list( 1 , 'a' , TRUE , 63 , FALSE )
+#[[1]]
+#[1] 1
+#[[2]]
+#[1] "a"
+#[[3]]
+#[1] TRUE
+#[[4]]
+#[1] 63
+#[[5]]
+#[1] FALSE</code></pre>
+    </section>
+
   </section>
 
-</section>
-
-<!--    NEW TOP LEVEL SLIDE      -->
+  <!--    NEW TOP LEVEL SLIDE      -->
+  <!-- <section>
 <section>
-
-  <section>
-    <h2>
-      Data Structures
-    </h2>
-    <aside class='notes'>
-
-    </aside>
-  </section>
-
-  <section align='left'>
-    <h3>
-      Do you speak vector?
-    </h3>
-    <div>
-    <p class='fragment'>
-      R is a vector based language.
-      Meaning that it performs operations on colections of values at the same time, rather than individually.
-<!--       It is this feature of R that makes it so useful for data analysis. -->
-    </p>
-    </div>
-    <p class='fragment'>
-      A vector can be thought of simply as a collection of values.
-    </p>
-    <div class='fragment'>
-    <p align='center'>
-      [ 1 2 3 4 5 6 7 8 9 10]
-    </p>
-    or
-    <p align='center'>
-      [ 'a' 'b' 'c' 'd' 'e' 'f' 'g']
-    </p>
-    </div>
-  </section>
-
-  <section align='left'>
-    <h3>
-      Do you speak vector?
-    </h3>
-    <p>
-      By using vectors, R makes data analysis easier.
-    </p>
-    <table>
-      <tr>
-        <td style='border:0' class='fragment' data-fragment-index='1'>
-          1
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-          2
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-          2
-        </td>
-      </tr>
-      <tr>
-        <td style='border:0' class='fragment' data-fragment-index='1'>
-          2
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-          2
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-          4
-        </td>
-      </tr>
-      <tr>
-        <td style='border:0' class='fragment' data-fragment-index='1'>
-          3
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-          X
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-          2
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-          =
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-          6
-        </td>
-      </tr>
-      <tr>
-        <td style='border:0' class='fragment' data-fragment-index='1'>
-          4
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='2'>
-          2
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-
-        </td>
-        <td style='border:0' class='fragment' data-fragment-index='3'>
-          8
-        </td>
-      </tr>
-      <tr>
-        <td class='fragment' data-fragment-index='1'>
-          5
-        </td>
-        <td class='fragment' data-fragment-index='2'>
-
-        </td>
-        <td class='fragment' data-fragment-index='2'>
-          2
-        </td>
-        <td class='fragment' data-fragment-index='3'>
-
-        </td>
-        <td class='fragment' data-fragment-index='3'>
-          10
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th style='border:0'>
-            </th>
-            <th style='border:0'>
-              Homogeneous
-            </th>
-            <th style='border:0'>
-              Heterogeneous
-            </th>
-        </thead>
-        <tbody>
-        </tr>
-      <tr>
-        <td style='border:0'>
-          <p>
-            1d
-          </p>
-        </td>
-        <td style='border:0'>
-          <p>
-            Atomic Vector
-          </p>
-        </td>
-        <td style='border:0'>
-          <p>
-            List
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td style='border:0'>
-          2d
-        </td>
-        <td style='border:0'>
-          Matrix
-        </td>
-        <td style='border:0'>
-          Data Frame
-        </td>
-      </tr>
-      <tr>
-        <td style='border:0'>
-          nd
-        </td>
-        <td style='border:0'>
-          Array
-        </td>
-        <td style='border:0'>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  <p align='right'>
-    <small>
-      Table from
-    </small>
-    <a href='http://adv-r.had.co.nz/Data-structures.html'>
-      <small>
-        &nbsp;Advanced R
-      </small>
-    </a>
-  </p>
-  </div>
+<h2>
+Functions
+</h2>
 <aside class='notes'>
 
 </aside>
 </section>
-</section>
-
-<!--    NEW TOP LEVEL SLIDE      -->
-<!-- <section>
-  <section>
-    <h2>
-      Functions
-    </h2>
-    <aside class='notes'>
-
-    </aside>
-  </section>
 </section> -->
+
+  <section>
+
+    <section>
+      <h2>
+        Functions
+      </h2>
+    </section>
+
+    <section>
+      Provide a description of what functions are.
+    </section>
+
+    <section align='left'>
+      <h3>
+        Some handy functions:
+      </h3>
+      <table align='left' style='font-size:80%'>
+        <thead>
+          <tr>
+            <td>
+            </td>
+            <th>
+              Object Management
+            </th>
+            <td></td>
+            <th>
+              File Management
+            </th>
+        </thead>
+        </tr>
+      <tr>
+        <td>Removes objects</td>
+        <td><pre><code class='r'>rm()</code></pre></td>
+        <td>Lists files in wd</td>
+        <td><pre><code class='r'>dir()</code></pre></td>
+      </tr>
+      <tr>
+        <td>
+          Lists objects
+        </td>
+        <td><pre><code class='r'>ls()</code></pre></td>
+        <td>Lists files in wd</td>
+        <td><pre><code class='r'>list.files()</code></pre></td>
+      </tr>
+      <tr>
+        <td>
+          Gets object data class
+        </td>
+        <td><pre><code class='r'>class()</code></pre></td>
+        <td>Gets wd</td>
+        <td><pre><code class='r'>getwd()</code></pre></td>
+      </tr>
+      <tr>
+        <td>
+          Gets object structure
+        </td>
+        <td><pre><code class='r'>str()</code></pre></td>
+        <td>Sets wd</td>
+        <td><pre><code class='r'>setwd()</code></pre></td>
+      </tr>
+      <tr>
+        <td>
+          Gets object length
+        </td>
+        <td><pre><code class='r'>length()</code></pre></td>
+        <td>Runs saved script</td>
+        <td><pre><code class='r'>source()</code></pre></td>
+      </tr>
+      <tr>
+        <td>
+          Gets object dimensions
+        </td>
+        <td><pre><code class='r'>dim()</code></pre></td>
+        <td></td>
+        <td>
+          <!--             <pre><code class='r'></code></pre> -->
+        </td>
+      </tr>
+      </table>
+  </section>
+
+</section>
 
 <!--    NEW TOP LEVEL SLIDE      -->
 <section>
@@ -1267,7 +1486,9 @@ a
   </section>
   <section>
     <ol>
-      <li>
+      <li>Use R to determine your current working directory. What is it?
+      </li>
+      <li>Use R to change your current working directory.
       </li>
     </ol>
   </section>
