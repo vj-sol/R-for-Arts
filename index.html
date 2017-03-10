@@ -1617,56 +1617,56 @@ a
                           </th>
                           <td></td>
                           <th>
-                            File Management
+                            Object Management (cont.)
                           </th>
                       </thead>
                       </tr>
                     <tr>
                       <td>Removes objects</td>
                       <td><pre><code class='r'>rm()</code></pre></td>
-                      <td>Lists files in wd</td>
-                      <td><pre><code class='r'>dir()</code></pre></td>
+                      <td>Get object class</td>
+                      <td><pre><code class='r'>class()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
                         Lists objects
                       </td>
                       <td><pre><code class='r'>ls()</code></pre></td>
-                      <td>Lists files in wd</td>
-                      <td><pre><code class='r'>list.files()</code></pre></td>
+                      <td>Is object a numeric</td>
+                      <td><pre><code class='r'>is.numeric()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
                         Gets object data class
                       </td>
                       <td><pre><code class='r'>class()</code></pre></td>
-                      <td>Gets wd</td>
-                      <td><pre><code class='r'>getwd()</code></pre></td>
+                      <td>Is object a character</td>
+                      <td><pre><code class='r'>is.character()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
                         Gets object structure
                       </td>
                       <td><pre><code class='r'>str()</code></pre></td>
-                      <td>Sets wd</td>
-                      <td><pre><code class='r'>setwd()</code></pre></td>
+                      <td>Is object a logical</td>
+                      <td><pre><code class='r'>is.logical()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
                         Gets object length
                       </td>
                       <td><pre><code class='r'>length()</code></pre></td>
-                      <td>Runs saved script</td>
-                      <td><pre><code class='r'>source()</code></pre></td>
+                      <td>Is object a factor</td>
+                      <td><pre><code class='r'>is.factor()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
                         Gets object dimensions
                       </td>
                       <td><pre><code class='r'>dim()</code></pre></td>
-                      <td></td>
+                      <td><span style='color:red'>Remove all objects</span></td>
                       <td>
-                        <!--             <pre><code class='r'></code></pre> -->
+                      <pre><code class='r'>rm( list = ls() )</code></pre>
                       </td>
                     </tr>
                     </table>
@@ -1682,57 +1682,63 @@ a
                           <td>
                           </td>
                           <th>
-                            Object Management
+                            Window Management
                           </th>
                           <td></td>
                           <th>
-                            File Management
+                             File Management
                           </th>
                       </thead>
                       </tr>
                     <tr>
-                      <td>Removes objects</td>
-                      <td><pre><code class='r'>rm()</code></pre></td>
-                      <td>Lists files in wd</td>
+                      <td>Closes R</td>
+                      <td><pre><code class='r'>q()</code></pre></td>
+                      <td>List files in wd</td>
                       <td><pre><code class='r'>dir()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
-                        Lists objects
+                        Opens plot window
                       </td>
-                      <td><pre><code class='r'>ls()</code></pre></td>
+                      <td><pre><code class='r'>dev.new()</code></pre></td>
                       <td>Lists files in wd</td>
                       <td><pre><code class='r'>list.files()</code></pre></td>
                     </tr>
                     <tr>
                       <td>
-                        Gets object data class
+                        Closes plot window
                       </td>
-                      <td><pre><code class='r'>class()</code></pre></td>
+                      <td><pre><code class='r'>dev.off()</code></pre></td>
                       <td>Gets wd</td>
                       <td><pre><code class='r'>getwd()</code></pre></td>
                     </tr>
                     <tr>
-                      <td>
-                        Gets object structure
+                      <td style='border:0'>
+
                       </td>
-                      <td><pre><code class='r'>str()</code></pre></td>
+                      <td style='border:0'>
+<!--                         <pre><code class='r'></code></pre> -->
+                      </td>
                       <td>Sets wd</td>
                       <td><pre><code class='r'>setwd()</code></pre></td>
                     </tr>
                     <tr>
-                      <td>
-                        Gets object length
+                      <td style='border:0'>
+
                       </td>
-                      <td><pre><code class='r'>length()</code></pre></td>
+                      <td style='border:0'>
+<!--                         <pre><code class='r'></code></pre> -->
+                      </td>
                       <td>Runs saved script</td>
                       <td><pre><code class='r'>source()</code></pre></td>
                     </tr>
                     <tr>
-                      <td>
-                        Gets object dimensions
+                      <td style='border:0'>
+
                       </td>
-                      <td><pre><code class='r'>dim()</code></pre></td>
+                      <td style='border:0'>
+<!--                         <pre><code class='r'></code></pre> -->
+                      </td>
                       <td></td>
                       <td>
                         <!--             <pre><code class='r'></code></pre> -->
@@ -1751,7 +1757,108 @@ a
                   <p class='fragment'>
                     One of the powerful things about R is that if you need a function and it doesn't exist, you can write it yourself!
                   </p>
+                  <div class='fragment'>
+                  <p>
+                    The general form of a function is:
+                    <pre><code class='r'>function_name <- function( ){
+                    stuff what the function goes and does
+                    }</code></pre>
+                    Notice that functions make use of curly brackets {}, more on types of bracket next week.
+                  </p>
+                  </div>
                 </section>
+
+              <section align='left'>
+              <h3>
+                Understand by doing
+                </h3>
+                <p>
+                  If you type most functions into R's command window without their accompanyng brackets, ie. ( ), you will see the code for that function, eg:
+                  <pre><code class='r'>View
+#function (x, title)
+#{
+#    check <- Sys.getenv("_R_CHECK_SCREEN_DEVICE_", "")
+#    msg <- "View() should not be used in examples etc"
+#    if (identical(check, "stop"))
+#        stop(msg, domain = NA)
+#    else if (identical(check, "warn"))
+#        warning(msg, immediate. = TRUE, noBreaks. = TRUE, domain = NA)
+#    if (missing(title))
+#        title <- paste("Data:", deparse(substitute(x))[1])
+#    as.num.or.char <- function(x) {
+#        if (is.character(x))
+#            x
+#        else if (is.numeric(x)) {
+#            storage.mode(x) <- "double"
+#            x
+#        }
+#        else as.character(x)
+#    }
+#    x0 <- as.data.frame(x)
+#    x <- as.list(format.data.frame(x0))
+#    rn <- row.names(x0)
+#    if (any(rn != seq_along(rn)))
+#        x <- c(list(row.names = rn), x)
+#    if (!is.list(x) || !length(x) || !all(sapply(x, is.atomic)) ||
+#        !max(lengths(x)))
+#        stop("invalid 'x' argument")
+#    if (grepl("darwin", R.version$os))
+#        check_for_XQuartz()
+#    invisible(.External2(C_dataviewer, x, title))
+#}
+</code></pre>
+                </p>
+              </section>
+
+              <section align='left'>
+                <h3>
+                  Understand by doing
+                </h3>
+                <p>
+                  So, lets say that we want to write a function that calcuate the mean of a numeric vector.
+                  We need to know 2 things:
+                  <ol>
+                    <li>The number of elements in the vector</li>
+                    <li>The sum of the elements in the vector</li>
+                </ol>
+              </p>
+              <p>
+                If we know both of these things, we can write the function!
+                </p>
+              </section>
+
+              <section align='left'>
+                <h3>
+                  Understand by doing
+                </h3>
+                <pre><code class='r'># My function to calculate the mean of a numeric vector
+my_mean <- function( x ){               # x is the input numeric vector
+                element_no <- length( x ) # Here I find out the number ofelements in teh vector
+                vector_sum <- sum( x )    # Here I sum the elements in the vector
+                input_mean <- vector_sum / element_no # Here I calculate the mean
+                return( input_mean )      # Here I return the calculation to the global environment
+                }
+
+a <- c( 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 )
+
+my_mean( a ) == mean( a )
+#[1] TRUE
+                </code></pre>
+                <div style='font-size:80%'>
+                <p class='fragment'>
+                Functions are a bit like Las Vegas.
+                <img style='position:absolute; top:325px; right:100px' width=300px src='resources/las-vegas.jpg' alt='Las Vegas'/>
+                </p>
+<!--                 <br/> -->
+                <blockquote class='fragment'>
+                What happens in a function, stays in a function
+                </blockquote>
+                <div class='fragment'>
+                Unless to ask it to spill the beans, notice the <pre style='display:inline'><code style='display:inline'>return()</code></pre> function.
+                </div>
+
+                </div>
+              </section>
 
               </section>
 
