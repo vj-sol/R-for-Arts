@@ -168,7 +168,7 @@
                 Day 3 - Friday 24th March
               </h4>
               <p>
-                Focuses on communication of findings from analyses perfromed in R.
+                Focuses on communication of findings from analyses performed in R.
               </p>
             </div>
             <aside class='notes'>
@@ -800,7 +800,7 @@ while(n < 1){
             Some brief notes about the code you will see in this course:
             <ul>
               <li class='fragment'>It should be possible to copy any code presented in this course directly into R.</li>
-              <li class='fragment'>The <p style='display:inline;color:red'>#</p> indicates that the code in that line is a comment and will not be interpretted by R. This is true for all R code, not just the code in this course.</li>
+              <li class='fragment'>The <p style='display:inline;color:red'>#</p> indicates that the code in that line is a comment and will not be interpreted by R. This is true for all R code, not just the code in this course.</li>
               <li class='fragment'>All output printed to the command window will be commented out to ensure that code can be run without issue, eg:
                 <pre><code>1 + 1
 #[1] 2</code></pre>
@@ -1032,7 +1032,7 @@ a
     <li class='fragment'>They MUST begin with a letter</li>
     <li class='fragment'>They MUST NOT contain spaces</li>
     <li class='fragment'>They ARE case sensitive</li>
-    <li class='fragment'>They can ONLY contain letters, numbers, _ and . </li>
+    <li class='fragment'>They can ONLY contain letters, numbers, <span style='color:red'>_</span> and <span style='color:red'>.</span> </li>
   </ul>
   </p>
 <p class='fragment'>
@@ -1140,7 +1140,7 @@ class(d)
             </h3>
             <div style='font-size:80%'>
 
-            Where Numeric, Character and Logical data classes can be combined with other data of the same class using the <pre style='display:inline'><code style='display:inline' class='r'>c()</code></pre> function, eg:
+            Numeric, Character and Logical data classes can be combined with other data of the same class using the <pre style='display:inline'><code style='display:inline' class='r'>c()</code></pre> function, eg:
             <pre><code class='r'>a <- c( 1 , 2 , 3 , 4 , 5 )
 a
 #[1] 1 2 3 4 5
@@ -1168,7 +1168,7 @@ Factors are a special type of data class.
               </h3>
               <p>
                 <span style='color:blue'>Factors</span> are best used to represent categorical data.
-                They can be thought of as a vector where each element is associated to a category, eg.
+                They can be thought of as a vector where each element is associated with a category, eg.
               </p>
               <table align='center' class='fragment'>
                 <tr>
@@ -1782,7 +1782,7 @@ a
                 Understand by doing
                 </h3>
                 <p>
-                  If you type most functions into R's command window without their accompanyng brackets, ie. ( ), you will see the code for that function, eg:
+                  If you type most functions into R's command window without their accompanying brackets, ie. ( ), you will see the code for that function, eg:
                   <pre><code class='r'>View
 #function (x, title)
 #{
@@ -1824,7 +1824,7 @@ a
                   Understand by doing
                 </h3>
                 <p>
-                  So, lets say that we want to write a function that calcuate the mean of a numeric vector.
+                  So, lets say that we want to write a function that calcuates the mean of a numeric vector.
                   We need to know 2 things:
                   <ol>
                     <li>The number of elements in the vector</li>
@@ -1842,7 +1842,7 @@ a
                 </h3>
                 <pre><code class='r'># My function to calculate the mean of a numeric vector
 my_mean <- function( x ){               # x is the input numeric vector
-                element_no <- length( x ) # Here I find out the number ofelements in teh vector
+                element_no <- length( x ) # Here I find out the number of elements in teh vector
                 vector_sum <- sum( x )    # Here I sum the elements in the vector
                 input_mean <- vector_sum / element_no # Here I calculate the mean
                 return( input_mean )      # Here I return the calculation to the global environment
@@ -1863,7 +1863,7 @@ my_mean( a ) == mean( a )
                 What happens in a function, stays in a function
                 </blockquote>
                 <div class='fragment'>
-                Unless to ask it to spill the beans, notice the <pre style='display:inline'><code style='display:inline'>return()</code></pre> function.
+                Unless you ask it to spill the beans, notice the <pre style='display:inline'><code style='display:inline'>return()</code></pre> function.
                 </div>
 
                 </div>
@@ -2007,7 +2007,7 @@ my_mean( a ) == mean( a )
                   </li>
                   <li>There are two ways to list the files in your new working directory. What are they?
                     <ol>
-                      <li type='a'>Use both to determine the contents of your working directoy and assign the output to an object.</li>
+                      <li type='a'>Use both to determine the contents of your working directory and assign the output to an object.</li>
                     </ol>
                   </li>
                 </ol>
@@ -2085,7 +2085,7 @@ c <- a + b
                     <pre><code class='r'>distance <- sample(5:100)
 time <- sample(200:295)</code></pre>
                     <ol>
-                      <li type='a'>Do you answers match to your neighbours answers? If not, why might this be?</li>
+                      <li type='a'>Do you answers match to your neighbours' answers? If not, why might this be?</li>
                     </ol>
                   </li>
 
@@ -2097,8 +2097,8 @@ time <- sample(200:295)</code></pre>
                   Basic Operations
                 </h3>
                 <ol start='7'>
-                  <li>How would you change a vector into an unorderd factor? Write the code to do this.</li>
-                  <li>How would you change a vector into an orderd factor? Write the code to do this.</li>
+                  <li>How would you change a vector into an unordered factor? Write the code to do this.</li>
+                  <li>How would you change a vector into an ordered factor? Write the code to do this.</li>
                 </ol>
               </section>
 
@@ -2138,7 +2138,7 @@ time <- sample(200:295)</code></pre>
                   </li>
                   <li>How would you describe a matrix?</li>
                   <li>How many dimensions does a matrix have?</li>
-                  <li>Can a factor contined in a matrix? How would you check?</li>
+                  <li>Can a factor contained in a matrix? How would you check?</li>
                 </ol>
               </section>
 
@@ -2151,7 +2151,7 @@ time <- sample(200:295)</code></pre>
                   </li>
                   <li>How would you describe a data frame?</li>
                   <li>How many dimensions does a data frame have?</li>
-                  <li>Can a factor contined in a data frame? How would you check?</li>
+                  <li>Can a factor contained in a data frame? How would you check?</li>
                 </ol>
               </section>
 
