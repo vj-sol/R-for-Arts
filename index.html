@@ -344,8 +344,8 @@ Why use R?
       </section>
 
       <section>
-        <div style='height:10%'>
-          <pre style='height:10%'><code data-trim data-noescape class='r' style='font-size:70%;height:10%'>
+        <div>
+          <pre><code class='r' style='font-size:70%;height:10%'>
 #R version 3.3.2 (2016-10-31) -- "Sincere Pumpkin Patch"
 #Copyright (C) 2016 The R Foundation for Statistical Computing
 #Platform: x86_64-pc-linux-gnu (64-bit)
@@ -1883,6 +1883,56 @@ print(paste( x , operator , y , "=" , result ))
 }</code></pre>
             </aside>
 
+        </section>
+
+        <section align='left'>
+        <h3>
+        Project 2: Coding a Mad Lib Generator
+        </h3>
+        <div style='font-size:80%'>
+        <p>
+        Adapt the code provided below to produce a mad lib generator.
+        </p>
+        <pre><code class='r'># Hint
+# a = adjective
+# n = noun
+# v = verb
+        mad_lib <- function(){
+story <- c('I walk through the', n1 ,'jungle. I take out my', a1, 'canteen. There is a',
+          a2, 'parrot with a', a3, n2, 'in its mouth right in front of me in the',
+          a4, 'trees! I gaze at its', a5, n3, '. A sudden sound awakes me from my daydream! A panther',
+          v1, 'in front of my head! I', v2, 'its ', a6, 'breath. I remember I have a packet of',
+          n4, 'that makes it go into a deep slumber! I ', v3, 'it away in front of the', n5,
+          '. Yes it is eating it! I ', v4, 'away through the', a7, 'jungle.',
+          'Phew; It has been an exciting day in the jungle.')
+cat(story)
+        }
+        </code></pre>
+<p>
+Once you've accomplished that, re-write the story with a tale of your own making.
+</p>
+<p>
+Are there any functions you don't recognise? If there are, find out what they do?
+</p>
+</div>
+<aside class='notes'>
+<pre><code class='r'>mad_lib <- function(){
+story <- c('I walk through the', n1 ,'jungle. I take out my', a1, 'canteen. There is a',
+          a2, 'parrot with a', a3, n2, 'in its mouth right in front of me in the',
+          a4, 'trees! I gaze at its', a5, n3, '. A sudden sound awakes me from my daydream! A panther',
+          v1, 'in front of my head! I', v2, 'its ', a6, 'breath. I remember I have a packet of',
+          n4, 'that makes it go into a deep slumber! I ', v3, 'it away in front of the', n5,
+          '. Yes it is eating it! I ', v4, 'away through the', a7, 'jungle.',
+          'Phew; It has been an exciting day in the jungle.')
+cat(story)
+        }</code></pre>
+</aside>
+        </section>
+
+        <section align='left'>
+        <h3>
+        Project 3:
+        </h3>
         </section>
 
     </section>
