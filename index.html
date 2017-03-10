@@ -1138,6 +1138,8 @@ class(d)
             <h3>
               Combining data
             </h3>
+            <div style='font-size:80%'>
+
             Where Numeric, Character and Logical data classes can be combined with other data of the same class using the <pre style='display:inline'><code style='display:inline' class='r'>c()</code></pre> function, eg:
             <pre><code class='r'>a <- c( 1 , 2 , 3 , 4 , 5 )
 a
@@ -1157,6 +1159,7 @@ Factors cannot. This is because they are made up of smaller elements such as num
 <p>
 Factors are a special type of data class.
 </p>
+</div>
           </section>
 
             <section align='left'>
@@ -2310,6 +2313,22 @@ Are there any functions you don't recognise? If there are, find out what they do
 </div>
 <aside class='notes'>
 <pre><code class='r'>mad_lib <- function(){
+n1 <- as.character(readline(prompt='Enter noun:'))
+a1 <- as.character(readline(prompt='Enter adjective:'))
+a2 <- as.character(readline(prompt='Enter adjective:'))
+a3 <- as.character(readline(prompt='Enter adjective:'))
+n2 <- as.character(readline(prompt='Enter noun:'))
+a4 <- as.character(readline(prompt='Enter adjective:'))
+a5 <- as.character(readline(prompt='Enter adjective:'))
+n3 <- as.character(readline(prompt='Enter noun:'))
+v1 <- as.character(readline(prompt='Enter verb:'))
+v2 <- as.character(readline(prompt='Enter verb:'))
+a6 <- as.character(readline(prompt='Enter adjective:'))
+n4 <- as.character(readline(prompt='Enter noun:'))
+v3 <- as.character(readline(prompt='Enter verb:'))
+n5 <- as.character(readline(prompt='Enter noun:'))
+v4 <- as.character(readline(prompt='Enter verb:'))
+a7 <- as.character(readline(prompt='Enter adjective:'))
 story <- c('I walk through the', n1 ,'jungle. I take out my', a1, 'canteen. There is a',
           a2, 'parrot with a', a3, n2, 'in its mouth right in front of me in the',
           a4, 'trees! I gaze at its', a5, n3, '. A sudden sound awakes me from my daydream! A panther',
@@ -2327,7 +2346,7 @@ cat(story)
         Project 3: How much to tip?
         </h3>
         <p>
-        Imagine that you're having a meal with some friends at a resturant.
+        Imagine that you're having a meal with some friends at a restaurant.
         You've come to the end of the meal and it is time to pay.
         Use R to calculate the following:
         <ol>
